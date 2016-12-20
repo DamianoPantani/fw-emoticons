@@ -1,0 +1,246 @@
+/*Font-Wonderful Emoticons. TODO link to github*/
+@font-face {
+  font-family: "FW-Emoticons";
+  src: local("FW-Emoticons"), url(emoticons.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Emoticons-Outline";
+  src: local("FW-Emoticons-Outline"), url(emoticons_outline.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Sketchy";
+  src: local("FW-Sketchy"), url(sketchysmiley.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Feel";
+  src: local("FW-Feel"), url(todayIFeel.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Meme";
+  src: local("FW-Meme"), url(far_chehre.ttf) format("truetype");
+}
+
+.fw {font-family: "FW-Emoticons";}
+.fw.filled {font-family: "FW-Emoticons-Outline";}
+.fw.sketchy {font-family: "FW-Sketchy";}
+.fw.feel {font-family: "FW-Feel";}
+.fw.meme {font-family: "FW-Meme";}
+
+.fw.tongue:before{content:"a";}
+.fw.meh:before{content:"b";}
+.fw.embarrassed:before{content:"c";}
+.fw.discomfort:before{content:"d";}
+.fw.confused:before{content:"e";}
+.fw.oops:before{content:"f";}
+.fw.amazed3:before{content:"g";}
+.fw.surprised:before{content:"h";}
+.fw.inlove:before{content:"i";}
+.fw.smile:before{content:"j";}
+.fw.sad:before{content:"k";}
+.fw.injured:before{content:"l";}
+.fw.happy:before{content:"m";}
+.fw.pain:before{content:"n";}
+.fw.pain2:before{content:"o";}
+.fw.happytongue:before{content:"p";}
+.fw.amazed:before{content:"q";}
+.fw.glasses:before{content:"r";}
+.fw.suspicious:before{content:"s";}
+.fw.amazed2:before{content:"t";}
+.fw.suspicious2:before{content:"u";}
+.fw.shocked:before{content:"v";}
+.fw.happytongue2:before{content:"w";}
+.fw.angel:before{content:"x";}
+.fw.devil:before{content:"y";}
+.fw.devil2:before{content:"z";}
+.fw.nerd:before{content:"2";}
+.fw.mad:before{content:"3";}
+.fw.mad2:before{content:"4";}
+.fw.evil:before{content:"5";}
+.fw.evil2:before{content:"6";}
+.fw.noface:before{content:"0";}
+.fw.target:before{content:".";}
+.fw.ban:before{content:",";}
+.fw.smile2:before{content:"A";}
+.fw.meh2:before{content:"C";}
+.fw.yay:before{content:"D";}
+.fw.sadtongue:before{content:"E";}
+.fw.sadtongue2:before{content:"F";}
+.fw.thoughtful2:before{content:"G";}
+.fw.wink:before{content:"H";}
+.fw.weird:before{content:"I";}
+.fw.nevermind:before{content:"J";}
+.fw.wink2:before{content:"K";}
+.fw.nevermind2:before{content:"L";}
+.fw.nevermind3:before{content:"M";}
+.fw.thoughtful:before{content:"N";}
+.fw.perky:before{content:"O";}
+.fw.watchingyou:before{content:"P";}
+.fw.watchingyou2:before{content:"Q";}
+.fw.aybby:before{content:"R";}
+.fw.dead:before{content:"S";}
+.fw.resentful:before{content:"T";}
+.fw.lol:before{content:"U";}
+.fw.mad3:before{content:"V";}
+.fw.angry:before{content:"W";}
+.fw.angry2:before{content:"X";}
+.fw.mad4:before{content:"Y";}
+.fw.tongue2:before{content:"Z";}
+
+.fw.sketchy.lol:before{content:"a";}
+.fw.sketchy.perky:before{content:"b";}
+.fw.sketchy.watchingyou:before{content:"c";}
+.fw.sketchy.devil:before{content:"d";}
+.fw.sketchy.thoughtful:before{content:"e";}
+.fw.sketchy.thoughtful2:before{content:"f";}
+.fw.sketchy.discomfort:before{content:"g";}
+.fw.sketchy.confused:before{content:"h";}
+.fw.sketchy.happytongue:before{content:"i";}
+.fw.sketchy.smile:before{content:"j";}
+.fw.sketchy.sad:before{content:"k";}
+.fw.sketchy.surprised:before{content:"l";}
+.fw.sketchy.dead:before{content:"n";}
+.fw.sketchy.wink:before{content:"o";}
+.fw.sketchy.injured:before{content:"p";}
+.fw.sketchy.weird:before{content:"r";}
+.fw.sketchy.pain:before{content:"u";}
+.fw.sketchy.smile2:before{content:"y";}
+
+.fw.feel.surprised:before{content:"a";}
+.fw.feel.excited4:before{content:"b";}
+.fw.feel.inlove:before{content:"c";}
+.fw.feel.annoyed:before{content:"d";}
+.fw.feel.happy5:before{content:"e";}
+.fw.feel.scared:before{content:"f";}
+.fw.feel.annoyed2:before{content:"g";}
+.fw.feel.ashamed2:before{content:"h";}
+.fw.feel.upset3:before{content:"i";}
+.fw.feel.excited5:before{content:"j";}
+.fw.feel.lonely:before{content:"k";}
+.fw.feel.worried:before{content:"l";}
+.fw.feel.upset2:before{content:"m";}
+.fw.feel.frustrated:before{content:"n";}
+.fw.feel.empty:before{content:"o";}
+.fw.feel.upset5:before{content:"p";}
+.fw.feel.inlove2:before{content:"q";}
+.fw.feel.excited3:before{content:"r";}
+.fw.feel.tongue6:before{content:"s";}
+.fw.feel.rich:before{content:"t";}
+.fw.feel.annoyed:before{content:"u";}
+.fw.feel.joyful:before{content:"v";}
+.fw.feel.rich2:before{content:"w";}
+.fw.feel.excited2:before{content:"y";}
+.fw.feel.worried3:before{content:"z";}
+.fw.feel.happy8:before{content:"A";}
+.fw.feel.upset4:before{content:"B";}
+.fw.feel.blessed:before{content:"C";}
+.fw.feel.tongue:before{content:"D";}
+.fw.feel.surprised2:before{content:"E";}
+.fw.feel.ashamed:before{content:"F";}
+.fw.feel.broken:before{content:"G";}
+.fw.feel.tongue2:before{content:"H";}
+.fw.feel.excited:before{content:"I";}
+.fw.feel.worried2:before{content:"J";}
+.fw.feel.happy3:before{content:"K";}
+.fw.feel.sad:before{content:"L";}
+.fw.feel.happy2:before{content:"M";}
+.fw.feel.tongue3:before{content:"N";}
+.fw.feel.happy6:before{content:"O";}
+.fw.feel.excited7:before{content:"P";}
+.fw.feel.happy:before{content:"Q";}
+.fw.feel.thankful:before{content:"R";}
+.fw.feel.blessed2:before{content:"S";}
+.fw.feel.poor:before{content:"T";}
+.fw.feel.happy7:before{content:"U";}
+.fw.feel.excited6:before{content:"V";}
+.fw.feel.happy4:before{content:"W";}
+.fw.feel.tongue4:before{content:"X";}
+.fw.feel.upset:before{content:"Y";}
+.fw.feel.tongue5:before{content:"Z";}
+.fw.feel.exclamation:before{content:"!";}
+
+.fw.meme.side-mouth:before{content:"a";}
+.fw.meme.angry:before{content:"b";}
+.fw.meme.fuu2:before{content:"c";}
+.fw.meme.crying:before{content:"d";}
+.fw.meme.rage-cat:before{content:"e";}
+.fw.meme.excited2:before{content:"f";}
+.fw.meme.megarage:before{content:"g";}
+.fw.meme.furious:before{content:"h";}
+.fw.meme.grin:before{content:"i";}
+.fw.meme.okay:before{content:"j";}
+.fw.meme.notokay:before{content:"k";}
+.fw.meme.canadian:before{content:"l";}
+.fw.meme.angry2:before{content:"m";}
+.fw.meme.alone:before{content:"n";}
+.fw.meme.derpina2:before{content:"o";}
+.fw.meme.fuu-derpina2:before{content:"p";}
+.fw.meme.fuu-derpina:before{content:"q";}
+.fw.meme.pfftch:before{content:"r";}
+.fw.meme.derpina:before{content:"t";}
+.fw.meme.reddit-sad:before{content:"u";}
+.fw.meme.reddit-rage:before{content:"v";}
+.fw.meme.yeah:before{content:"w";}
+.fw.meme.hmm:before{content:"x";}
+.fw.meme.alone-happy:before{content:"y";}
+.fw.meme.trollface-fem:before{content:"z";}
+.fw.meme.lol:before{content:"B";}
+.fw.meme.normal2:before{content:"C";}
+.fw.meme.tongue-down:before{content:"D";}
+.fw.meme.normal:before{content:"E";}
+.fw.meme.pffr:before{content:"F";}
+.fw.meme.bigsmile:before{content:"G";}
+.fw.meme.hehe:before{content:"H";}
+.fw.meme.tongue-up:before{content:"I";}
+.fw.meme.happy:before{content:"J";}
+.fw.meme.dumbfounded:before{content:"K";}
+.fw.meme.why:before{content:"L";}
+.fw.meme.ewbte:before{content:"M";}
+.fw.meme.epicwin:before{content:"N";}
+.fw.meme.pleased:before{content:"O";}
+.fw.meme.notsure:before{content:"P";}
+.fw.meme.wait:before{content:"Q";}
+.fw.meme.horror:before{content:"R";}
+.fw.meme.what:before{content:"S";}
+.fw.meme.suspicious:before{content:"T";}
+.fw.meme.questioning:before{content:"U";}
+.fw.meme.unhappy:before{content:"W";}
+.fw.meme.sweaty:before{content:"X";}
+.fw.meme.frown:before{content:"Y";}
+.fw.meme.herp:before{content:"Z";}
+.fw.meme.why2:before{content:"0";}
+.fw.meme.please2:before{content:"1";}
+.fw.meme.derpina-frown:before{content:"2";}
+.fw.meme.chan:before{content:"3";}
+.fw.meme.seriously:before{content:"4";}
+.fw.meme.trollface-fem2:before{content:"5";}
+.fw.meme.darkstare:before{content:"6";}
+.fw.meme.yuno:before{content:"7";}
+.fw.meme.herpderp:before{content:"8";}
+.fw.meme.cereal-angry:before{content:"9";}
+.fw.meme.please:before{content:"$";}
+.fw.meme.trollface-sir:before{content:"-";}
+.fw.meme.pokerface:before{content:"*";}
+.fw.meme.tobey:before{content:"/";}
+.fw.meme.please-sad:before{content:"%";}
+.fw.meme.megusta:before{content:'"';}
+.fw.meme.megusta-disappoint:before{content:"'";}
+.fw.meme.please-scared:before{content:"#";}
+.fw.meme.ayfkm:before{content:"&";}
+.fw.meme.milk-hairy:before{content:"_";}
+.fw.meme.disappoint:before{content:"(";}
+.fw.meme.megusta2:before{content:")";}
+.fw.meme.trolldad:before{content:",";}
+.fw.meme.challenge:before{content:".";}
+.fw.meme.longneck:before{content:"!";}
+.fw.meme.trollface-sad:before{content:"|";}
+.fw.meme.trollface2:before{content:"{";}
+.fw.meme.trollface:before{content:"}"}
+.fw.meme.fuu:before{content:"]";}
+.fw.meme.excited:before{content:"[";}
+.fw.meme.milk:before{content:"`";}
+.fw.meme.rage-eyes:before{content:"^";}
+.fw.meme.yeah-fem:before{content:"~";}
+
+/* TODO merge declarations */
+/* TODO add missing declarations */
+/* TODO add script replacing :) with <span> */

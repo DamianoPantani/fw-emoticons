@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>fw-emoticons Demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../fw_emoticons.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+	<div class="cover">
+	    <h1>FW Emoticons<span class="fw filled glasses"></span></h1>
+		<h5>Font-based CSS emoticons set</h5>
+	</div>
+	<div class="description">
+	
+	  <h3>FW Emoticons</h3>
+	  <p>Do you like Font Awesome Icons? You gotta love <strong>Font Wonderful Emoticons!</strong></p>
+	  <ul>
+	    <li>Free <span class="fw smile"></span></li>
+		<li>Lightweight <span class="fw yay"></span></li>
+		<li>Easy to use <span class="fw amazed3"></span></li>
+		<li>Reach collection <span class="fw inlove"></span> of font-based css emoticons.</li>
+	  </ul>
+	  <p>No more nasty and heavy images. Perfect for blogs, personal sites, forums, social networks, and pretty much everything you want.</p>
+	  
+	  <h3>Installation</h3>
+	  <p>Add this line to your head section:</p>
+	  <pre>
+	    <code>&lt;link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/fw_emoticons.css"&gt;</code>
+	  </pre>
+	  <p>You can also <a href="https://github.com/DamianSzGithub/fw-emoticons">download the repo</a>, link just css to your page, and edit this component locally if you wish.</p>
+	  
+	  <h3>Usage</h3>
+	  <p>Main pattern to insert emoticon to your page looks like follow:</p>
+	  <pre>
+	    <code>&lt;ANY class="fw EMO_NAME EMO_TYPE"&gt;&lt;/ANY&gt;</code>
+	  </pre>
+	  
+	  <p>Examples:</p>
+	  <pre><table>
+	    <tr>
+		  <td>&lt;span class="fw pain sketchy"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw pain sketchy"></span></td>
+		  <td>In span element - recommended</td>
+		</tr>
+		<tr>
+		  <td>&lt;i class="fw glasses filled"&gt;&lt;/i&gt;</td>
+		  <td><i class="fw glasses filled"></i></td>
+		  <td>In i element, 'filled' emo type</td>
+		</tr>
+		<tr>
+		  <td>&lt;strong class="fw perky"&gt;&lt;/strong&gt;</td>
+		  <td><strong class="fw perky"></strong></td>
+		  <td>In 'strong' element, default emo type</td>
+		</tr>
+	  </table></pre>
+	  
+	  <p>Make sure to customize .fw class to your needs. The most important attributes are:</p>
+	  <pre>
+	  <code>.somediv .fw {
+&nbsp;&nbsp;&nbsp;&nbsp;font-size: 22px;
+&nbsp;&nbsp;&nbsp;&nbsp;line-height: 22px;
+&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: sub;
+&nbsp;&nbsp;&nbsp;&nbsp;color: red;
+&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal; /* Never italic */
+&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300; /* Never bold */
+&nbsp;&nbsp;&nbsp;&nbsp;margin-left: 2px; /* Auto-separates emoticons from text */
+&nbsp;&nbsp;&nbsp;&nbsp;transform: scaleX(-1); /* Flip horizontally */
+&nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 0 0 1px rgba(0,0,0,0.15); /* make 'em smooth! */
+      }</code>
+	</pre>
+	
+	<h3>Credits</h3>
+	<ul>
+	  <li><a href="http://fontpro.com/emoticons-font-12006"><strong>Emoticons font</strong> (default and outlined):</a> Purdy Design (<a href="http://www.purdydesign.com">purdydesign.com</a>). Free for personal use</li>
+	  <li><a href="http://fontpro.com/sketchy-smiley-font-14797"><strong>Sketchy font:</strong></a> David Kerkhoff (<a href="http://www.hanodedphotography.com">hanodedphotography.com</a>). Donationware</li>
+	  <li><a href="http://fontpro.com/today-i-feel-font-3260"><strong>Today I Feel font:</strong></a> Kimberly Geswein (<a href="http://www.kimberlygeswein.com">kimberlygeswein.com</a>). Free for personal use</li>
+	  <li><a href=" http://fontpro.com/far-chehre-font-9520"><strong>Far.Chehre (Meme) font:</strong></a> Abolfazl Seilsepour (<a href="http://www.seilsepour.ir">seilsepour.ir</a>). 100% Free</li>
+	</ul>
+	<h3>Contact</h3>
+	<p>
+	  Any considerations? Problems? Upgrade ideas? Please leave me a message: <strong>dejmiens@yahoo.com</strong><br>
+	  Thank you!<br><br><br>
+	  <center><span class="fw nerd" style="font-size: 200px;"></span></center>
+	  <br><br>
+	</p>
+	</div>
+	<noscript><h2>Turn on JavaScripts to see content of the page</h2></noscript>
+	<div class="description"><center>Lower is the list of all emoticons included. Click to copy in span element.</center></div>
+	<div class="emos"></div>
+	<div class="cover">By Damiano Pantani. <a href="https://github.com/DamianSzGithub/fw-emoticons">Github Repo</a>. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">Bike Stats</a></div>
+</body>
+
+<script>
+
+var aux = document.createElement("input");
+document.body.appendChild(aux);
+	
+function copyToClipboard() {
+    var classes = this.classList;
+	classes.remove("copied");
+
+    aux.setAttribute("value", this.outerHTML);
+    aux.select();
+    document.execCommand("copy");
+
+	classes.add("copied");
+}
+
+var standardIconsSet = [
+	['smile2', 'wink', 'smile', 'happy', 'yay', 'amazed', 'amazed2', 'amazed3'],
+	['mad3', 'perky', 'glasses', 'wink2', 'embarrassed', 'oops', 'mad4', 'aybby'],
+	['happytongue', 'happytongue2', 'inlove', 'sadtongue', 'sadtongue2', 'nevermind2', 'nevermind3', 'resentful'],
+	['tongue2', 'tongue', 'meh', 'injured', 'nevermind', 'meh2', 'suspicious', 'watchingyou2'],
+	['dead', 'thoughtful', 'thoughtful2', 'lol', 'confused', 'sad', 'discomfort', 'pain'],
+	['weird', 'angry2', 'watchingyou', 'angry', 'suspicious2', 'surprised', 'pain2', 'shocked'],
+	['mad', 'evil', 'evil2', 'devil', 'devil2', 'angel', 'nerd', 'noface'],
+	['target', 'ban']
+];
+
+var sketchyIconsSet = [
+	['smile2', 'smile', 'perky', 'wink', 'happytongue', 'devil'],
+	['injured', 'weird', 'thoughtful', 'thoughtful2', 'surprised', 'pain'],
+	['sad', 'discomfort', 'confused', 'lol', 'watchingyou'],
+];
+
+var feelIconsSet = [
+	['happy','happy2','happy3','happy4','happy5','happy6','happy7','happy8'],
+	['thankful','excited','excited2','excited3','excited4','excited5','excited6','excited7',],
+	['empty','joyful','blessed','blessed2','rich','rich2','inlove2','inlove'],
+	['tongue2','ashamed','tongue4','tongue6','tongue3','tongue','tongue5'],
+	['annoyed','annoyed2','annoyed','worried','worried3','worried2','frustrated'],
+	['upset2','ashamed2','upset3','upset5','upset4','sad','broken','poor'],
+	['upset','surprised','scared','surprised2','lonely', 'exclamation'],
+];
+
+var memeIconsSet = [
+	['lol','trollface','challenge','alone','alone-happy','grin'],
+	['trollface-sad','trollface2','trolldad','trollface-sir','trollface-fem','trollface-fem2'],
+	['happy','pleased','hehe','excited2','bigsmile','epicwin'],
+	['excited','ewbte','tongue-down','tongue-up','pffr','pfftch'],
+	['normal','normal2','wait','notsure','questioning','suspicious'],
+	['yeah','yeah-fem','frown','what','dumbfounded','side-mouth'],
+	['okay','hmm','pokerface','ayfkm','herpderp','notokay'],
+	['megusta','megusta2','megusta-disappoint','disappoint','milk','milk-hairy'],
+	['tobey','please','please2','please-sad','please-scared','chan'],
+	['unhappy','sweaty','herp','rage-eyes','fuu','fuu2'],
+	['angry','angry2','furious','megarage','darkstare','rage-cat'],
+	['crying','horror','why','why2','yuno','canadian'],
+	['seriously','cereal-angry','reddit-rage','reddit-sad','longneck'],
+	['derpina','derpina2','derpina-frown','fuu-derpina','fuu-derpina2']
+];
+
+function addEmos(title, iconsSet, emoClass){
+	var emoBlock = document.querySelectorAll(".emos");
+
+	var titleElement = document.createElement("h2");
+	titleElement.innerHTML = title;
+	emoBlock[0].appendChild(titleElement);
+	
+	var inner = document.createElement("div");
+	inner.classList.add("inner");
+	inner.id = emoClass;
+	emoBlock[0].appendChild(inner);
+
+	for (rowIndex = 0; rowIndex < iconsSet.length; rowIndex++){
+	  var row = document.createElement("div");
+	  row.classList.add("row");
+	  inner.appendChild(row);
+	  for (i = 0; i < iconsSet[rowIndex].length; i++){
+		
+		var outerEmo = document.createElement("div");
+		
+		var emo = document.createElement("span");
+		emo.classList.add('fw', emoClass, iconsSet[rowIndex][i]);
+		emo.addEventListener('click', copyToClipboard);
+		outerEmo.appendChild(emo);
+		
+		var caption = document.createElement("span");
+		caption.innerHTML = iconsSet[rowIndex][i];
+		outerEmo.appendChild(caption);
+		
+		row.appendChild(outerEmo);
+	  }
+	}
+}
+
+addEmos('Standard Emoticons', standardIconsSet, 'fw');
+addEmos('Standard Outlined Emoticons', standardIconsSet, 'filled');
+addEmos('Sketchy Emoticons', sketchyIconsSet, 'sketchy'); 
+addEmos('Today I Feel Emoticons', feelIconsSet, 'feel'); 
+addEmos('Meme Emoticons', memeIconsSet, 'meme'); 
+
+
+</script>
+</html>
