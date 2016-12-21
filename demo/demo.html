@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>fw-emoticons Demo</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" type="text/css" media="all" href="../fw_emoticons.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="../fw_emoticons.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
 <body>
 	<div class="cover">
-	    <h1>FW Emoticons<span class="fw filled glasses"></span></h1>
+	    <h1>FW Emoticons<span class="fw fw-o glasses"></span></h1>
 		<h5>Font-based CSS emoticons set</h5>
 	</div>
 	<div class="description">
@@ -24,73 +24,121 @@
 		<li>Reach collection <span class="fw inlove"></span> of font-based css emoticons.</li>
 	  </ul>
 	  <p>No more nasty and heavy images. Perfect for blogs, personal sites, forums, social networks, and pretty much everything you want.</p>
-	  
+	</div>
+	
+	<div class="description">
 	  <h3>Installation</h3>
 	  <p>Add this line to your head section:</p>
 	  <pre>
 	    <code>&lt;link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/fw_emoticons.css"&gt;</code>
 	  </pre>
-	  <p>You can also <a href="https://github.com/DamianSzGithub/fw-emoticons">download the repo</a>, link just css to your page, and edit this component locally if you wish.</p>
-	  
+	  <p>You can also <a href="https://github.com/DamianSzGithub/fw-emoticons" target="_blank">download the repo</a>, link just css to your page, and edit this component locally if you wish.</p>
+	</div>
+	
+	<div class="description">
 	  <h3>Usage</h3>
 	  <p>Main pattern to insert emoticon to your page looks like follow:</p>
 	  <pre>
-	    <code>&lt;ANY class="fw EMO_NAME EMO_TYPE"&gt;&lt;/ANY&gt;</code>
+	    <code>&lt;ANY class="fw EMO_TYPE EMO_NAME"&gt;&lt;/ANY&gt;</code>
 	  </pre>
 	  
-	  <p>Examples:</p>
-	  <pre><table>
-	    <tr>
-		  <td>&lt;span class="fw pain sketchy"&gt;&lt;/span&gt;</td>
-		  <td><span class="fw pain sketchy"></span></td>
-		  <td>In span element - recommended</td>
-		</tr>
-		<tr>
-		  <td>&lt;i class="fw glasses filled"&gt;&lt;/i&gt;</td>
-		  <td><i class="fw glasses filled"></i></td>
-		  <td>In i element, 'filled' emo type</td>
-		</tr>
-		<tr>
-		  <td>&lt;strong class="fw perky"&gt;&lt;/strong&gt;</td>
-		  <td><strong class="fw perky"></strong></td>
-		  <td>In 'strong' element, default emo type</td>
-		</tr>
-	  </table></pre>
-	  
-	  <p>Make sure to customize .fw class to your needs. The most important attributes are:</p>
+	  <p>Current types:</p>
+	  Default (no type specified)<br>
+	  <strong>fw-o</strong> - Default (outlined)<br>
+	  <strong>fw-s</strong> - Sketchy<br>
+	  <strong>fw-f</strong> - Today I Feel<br>
+	  <strong>fw-m</strong> - Memes<br>
+ 
+	  <p>Make sure to customize .fw class to your needs. The most common attributes will be:</p>
 	  <pre>
-	  <code>.somediv .fw {
-&nbsp;&nbsp;&nbsp;&nbsp;font-size: 22px;
-&nbsp;&nbsp;&nbsp;&nbsp;line-height: 22px;
-&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: sub;
-&nbsp;&nbsp;&nbsp;&nbsp;color: red;
-&nbsp;&nbsp;&nbsp;&nbsp;font-style: normal; /* Never italic */
-&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 300; /* Never bold */
-&nbsp;&nbsp;&nbsp;&nbsp;margin-left: 2px; /* Auto-separates emoticons from text */
+		<code>.somediv .fw {
 &nbsp;&nbsp;&nbsp;&nbsp;transform: scaleX(-1); /* Flip horizontally */
 &nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 0 0 1px rgba(0,0,0,0.15); /* make 'em smooth! */
-      }</code>
-	</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;margin-left: 2px; /* Auto-separates emoticons from text */
+&nbsp;&nbsp;&nbsp;&nbsp;font-size: 22px;
+&nbsp;&nbsp;&nbsp;&nbsp;color: red;
+		}</code>
+	  </pre>
+	</div>
 	
-	<h3>Credits</h3>
-	<ul>
-	  <li><a href="http://fontpro.com/emoticons-font-12006"><strong>Emoticons font</strong> (default and outlined):</a> Purdy Design (<a href="http://www.purdydesign.com">purdydesign.com</a>). Free for personal use</li>
-	  <li><a href="http://fontpro.com/sketchy-smiley-font-14797"><strong>Sketchy font:</strong></a> David Kerkhoff (<a href="http://www.hanodedphotography.com">hanodedphotography.com</a>). Donationware</li>
-	  <li><a href="http://fontpro.com/today-i-feel-font-3260"><strong>Today I Feel font:</strong></a> Kimberly Geswein (<a href="http://www.kimberlygeswein.com">kimberlygeswein.com</a>). Free for personal use</li>
-	  <li><a href=" http://fontpro.com/far-chehre-font-9520"><strong>Far.Chehre (Meme) font:</strong></a> Abolfazl Seilsepour (<a href="http://www.seilsepour.ir">seilsepour.ir</a>). 100% Free</li>
-	</ul>
-	<h3>Contact</h3>
-	<p>
-	  Any considerations? Problems? Upgrade ideas? Please leave me a message: <strong>dejmiens@yahoo.com</strong><br>
-	  Thank you!<br><br><br>
-	  <center><span class="fw nerd" style="font-size: 200px;"></span></center>
-	  <br><br>
-	</p>
+	<div class="description">
+	  <h3>Examples:</h3>
+	  <pre><table>
+	  	<tr>
+		  <td>&lt;span class="fw perky"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw perky"></span></td>
+		</tr>
+		<tr>
+		  <td>&lt;span class="fw fw-o perky"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-o perky"></span></td>
+		</tr>
+	    <tr>
+		  <td>&lt;span class="fw fw-s pain"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-s pain"></span></td>
+		</tr>
+	  </table></pre>
+	  <br>
+	  
+	  <h3>Animations:</h3>
+	  <p>Animations are perfect supplementation for this component. Emoticons are working fine with <a href="https://daneden.github.io/animate.css/" target="_blank"><strong>Animate.css</strong></a> framework, but you can also use out of the box ones:</p>
+	  <pre><table>
+	    <tr>
+		  <td>&lt;span class="fw fw-m fuu fw-shake"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-m fuu fw-shake" style="font-size: 60px;"></span></td>
+		</tr>
+		<tr>
+		  <td>&lt;span class="fw fw-m alone fw-spin"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-m alone fw-spin" style="font-size: 60px;"></span></td>
+		</tr>
+		<tr>
+		  <td>&lt;span class="fw fw-m trollface fw-rotate"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-m trollface fw-rotate" style="font-size: 60px;"></td>
+		</tr>
+		<tr>
+		  <td>&lt;span class="fw fw-m pfftch fw-updown"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-m pfftch fw-updown" style="font-size: 60px;"></span></td>
+		</tr>
+		<tr>
+		  <td>&lt;span class="fw fw-m derpina fw-bounce"&gt;&lt;/span&gt;</td>
+		  <td><span class="fw fw-m derpina fw-bounce" style="font-size: 60px;"></span></td>
+		</tr>
+	  </table></pre>
+	  <br>
+	  <p>To modify default animation behavior you can add these classes respectively:</p>
+	  <strong>Duration:</strong> fw-100ms, fw-200ms ... fw-2000ms<br>
+	  <strong>Delay:</strong> fw-d1s, fw-d2s ... fw-d10s<br>
+	  <strong>Iteration count:</strong> fw-rep-2, fw-rep-3 ... fw-rep-10<br>
+	  <strong>Direction:</strong> fw-reverse
+	  
+	</div>
+
+	<div class="description">
+		<h3>License</h3>
+		<p>FW-Emoticons is a Freeware component, but it uses third-party font faces. Please refer to the section below for more license details.</p>
+	</div>
+	
+	<div class="description">
+		<h3>Credits</h3>
+		<ul>
+		  <li><a href="http://fontpro.com/emoticons-font-12006" target="_blank"><strong>Emoticons font</strong> (default and outlined):</a> Purdy Design (<a href="http://www.purdydesign.com" target="_blank">purdydesign.com</a>). Free for personal use</li>
+		  <li><a href="http://fontpro.com/sketchy-smiley-font-14797" target="_blank"><strong>Sketchy font:</strong></a> David Kerkhoff (<a href="http://www.hanodedphotography.com" target="_blank">hanodedphotography.com</a>). Donationware</li>
+		  <li><a href="http://fontpro.com/today-i-feel-font-3260" target="_blank"><strong>Today I Feel font:</strong></a> Kimberly Geswein (<a href="http://www.kimberlygeswein.com" target="_blank">kimberlygeswein.com</a>). Free for personal use</li>
+		  <li><a href="http://fontpro.com/far-chehre-font-9520" target="_blank"><strong>Far.Chehre (Meme) font:</strong></a> Abolfazl Seilsepour (<a href="http://www.seilsepour.ir" target="_blank">seilsepour.ir</a>). 100% Free</li>
+		</ul>
+	</div>
+	
+	<div class="description">
+		<h3>Contact</h3>
+		<p>
+		  Any considerations? Problems? Upgrade ideas? Please leave me a message: <strong>dejmiens@yahoo.com</strong><br>
+		  Thank you!<br><br><br>
+		  <center><span class="fw nerd" style="font-size: 200px;"></span></center>
+		  <br><br>
+		</p>
 	</div>
 	<noscript><h2>Turn on JavaScripts to see content of the page</h2></noscript>
-	<div class="description"><center>Lower is the list of all emoticons included. Click to copy in span element.</center></div>
-	<div class="emos"></div>
-	<div class="cover">By Damiano Pantani. <a href="https://github.com/DamianSzGithub/fw-emoticons">Github Repo</a>. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">Bike Stats</a></div>
+	<div class="emos"><!-- Added by JS --></div>
+	<div class="cover">By Damiano Pantani. <a href="https://github.com/DamianSzGithub/fw-emoticons" target="_blank">Github Repo</a>. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">Bike Stats</a></div>
 </body>
 
 <script>
@@ -137,7 +185,7 @@ var feelIconsSet = [
 ];
 
 var memeIconsSet = [
-	['lol','trollface','challenge','alone','alone-happy','grin'],
+	['trollface','challenge','alone','alone-happy','grin','lol'],
 	['trollface-sad','trollface2','trolldad','trollface-sir','trollface-fem','trollface-fem2'],
 	['happy','pleased','hehe','excited2','bigsmile','epicwin'],
 	['excited','ewbte','tongue-down','tongue-up','pffr','pfftch'],
@@ -149,22 +197,22 @@ var memeIconsSet = [
 	['unhappy','sweaty','herp','rage-eyes','fuu','fuu2'],
 	['angry','angry2','furious','megarage','darkstare','rage-cat'],
 	['crying','horror','why','why2','yuno','canadian'],
-	['seriously','cereal-angry','reddit-rage','reddit-sad','longneck'],
+	['seriously','cereal-angry','reddit-rage','reddit-sad','longneck', 'what2'],
 	['derpina','derpina2','derpina-frown','fuu-derpina','fuu-derpina2']
 ];
 
 function addEmos(title, iconsSet, emoClass){
 	var emoBlock = document.querySelectorAll(".emos");
-
-	var titleElement = document.createElement("h2");
-	titleElement.innerHTML = title;
-	emoBlock[0].appendChild(titleElement);
 	
 	var inner = document.createElement("div");
-	inner.classList.add("inner");
+	inner.classList.add("description");
 	inner.id = emoClass;
+	var titleElement = document.createElement("h3");
+	titleElement.innerHTML = title;
+	
+	inner.appendChild(titleElement);
 	emoBlock[0].appendChild(inner);
-
+	
 	for (rowIndex = 0; rowIndex < iconsSet.length; rowIndex++){
 	  var row = document.createElement("div");
 	  row.classList.add("row");
@@ -188,10 +236,10 @@ function addEmos(title, iconsSet, emoClass){
 }
 
 addEmos('Standard Emoticons', standardIconsSet, 'fw');
-addEmos('Standard Outlined Emoticons', standardIconsSet, 'filled');
-addEmos('Sketchy Emoticons', sketchyIconsSet, 'sketchy'); 
-addEmos('Today I Feel Emoticons', feelIconsSet, 'feel'); 
-addEmos('Meme Emoticons', memeIconsSet, 'meme'); 
+addEmos('Standard Outlined Emoticons', standardIconsSet, 'fw-o');
+addEmos('Sketchy Emoticons', sketchyIconsSet, 'fw-s'); 
+addEmos('Today I Feel Emoticons', feelIconsSet, 'fw-f'); 
+addEmos('Meme Emoticons', memeIconsSet, 'fw-m'); 
 
 
 </script>

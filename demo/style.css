@@ -33,7 +33,6 @@ a:hover {
 }
 
 strong {
-  opacity: 0.8;
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 14px;
 }
@@ -68,8 +67,9 @@ noscript h2{
   padding: 20px 0;
 }
 
-.description,
-.inner {
+.description {
+  text-align: justify;
+  margin: 20px auto;
   background-color: rgba(255,255,255, 0.5);
   padding: 10px 20px;
   box-sizing: border-box;
@@ -79,20 +79,8 @@ noscript h2{
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
 }
 
-.inner {
-  text-align: center;
-  margin: 20px auto 80px auto;
-}
-
-.description {
-  text-align: justify;
-  margin: 20px auto;
-}
 .description h3{
   border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-.description h3:not(:first-child) {
-  margin-top: 80px;
 }
 
 .description td {
@@ -100,14 +88,11 @@ noscript h2{
   font-family: monospace;
 }
 
-.emos{
-  margin-top: 60px;
-}
-.emos h2 {
-  text-align: center;
+.emos h3 {
+  margin-bottom: 30px;
 }
 
-.inner#meme{
+.description#meme{
   padding-top: 40px;
 }
 
@@ -121,20 +106,25 @@ noscript h2{
   position: relative;
 }
 .row>div>span:not(.fw) {
-  font-size: 12px;
-  color: rgba(0,0,0,0.7);
   display: block;
+  color: rgba(0,0,0,0.7);
+  font-size: 12px;
+  line-height: 1px;
 }
 
 .fw {
   vertical-align: bottom;
 }
 .cover .fw {
-  font-weight: 300;
+  display: inline;
+}
+.description .fw {
+  font-size: 20px;
+  vertical-align: sub;
 }
 .emos .fw {
+  line-height: 60px;
   width: 80px;
-  display: block;
   font-size: 32px;
   cursor: pointer;
   transition: all 0.1s ease;
@@ -147,25 +137,19 @@ noscript h2{
  font-size: 35px;
  color: #888;
 }
-.emos .fw.feel {font-size: 26px;}
-.emos .fw.feel:hover {font-size: 29px;}
-.emos .fw.feel:active {font-size: 28px;}
-.emos .fw.meme {font-size: 80px;width: 120px;}
-.emos .fw.meme:hover {font-size: 86px;}
-.emos .fw.meme:active {font-size: 85px;}
-
-
-.description .fw {
-  font-size: 22px;
-  vertical-align: sub;
-}
+.emos .fw.fw-f {font-size: 26px;}
+.emos .fw.fw-f:hover {font-size: 29px;}
+.emos .fw.fw-f:active {font-size: 28px;}
+.emos .fw.fw-m {font-size: 70px;width: 120px;}
+.emos .fw.fw-m:hover {font-size: 75px;}
+.emos .fw.fw-m:active {font-size: 74px;}
 
 .copied {
   animation: copied 0.8s;
 }
 .copied:after {
   position: absolute;
-  bottom: 52px;
+  bottom: 42px;
   left: calc(50% - 26px);
   opacity: 0;
   visibility: hidden;
@@ -190,5 +174,5 @@ noscript h2{
 @keyframes goUp{
   0%{visibility:visible;}
   50%{opacity: 0.7;}
-  100%{bottom: 60px; opacity: 0;}
+  100%{bottom: 50px; opacity: 0;}
 }
