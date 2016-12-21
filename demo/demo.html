@@ -5,6 +5,7 @@
 <title>fw-emoticons Demo</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" type="text/css" media="all" href="../fw_emoticons.css">
+<script src="../fw_emoticons.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
@@ -240,6 +241,18 @@ addEmos('Standard Outlined Emoticons', standardIconsSet, 'fw-o');
 addEmos('Sketchy Emoticons', sketchyIconsSet, 'fw-s'); 
 addEmos('Today I Feel Emoticons', feelIconsSet, 'fw-f'); 
 addEmos('Meme Emoticons', memeIconsSet, 'fw-m'); 
+
+/*
+(function() {
+	replaceEmoticons(
+	  {
+		selector: '.description',
+		mainClass: 'fw-o',
+		emoElement: 'span'
+	  }
+	);
+})();
+*/
 
 
 </script>
