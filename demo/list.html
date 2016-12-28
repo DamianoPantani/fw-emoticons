@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>fw-emoticons Demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../fw_emoticons.css">
+<script src="../fw_emoticons.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+	<div class="cover">
+	    <h1>FW Emoticons<span class="fw fw-o glasses"></span></h1>
+		<h5>Font-based CSS emoticons set</h5>
+	</div>
+	<div class="description">
+	<h4>Full list of all emoticons included in the current version of <a href="https://github.com/DamianSzGithub/fw-emoticons"><strong>Font Wonderful Emoticons</strong></a>. Click to copy</h4>
+	</div>
+	<noscript><h2>Turn on JavaScripts to see content of the page</h2></noscript>
+	<div class="emos"><!-- Added by JS --></div>
+	<div class="cover">By Damiano Pantani. <a href="https://github.com/DamianSzGithub/fw-emoticons" target="_blank">Github Repo</a>. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">Bike Stats</a></div>
+</body>
+
+<script>
+
+var aux = document.createElement("input");
+document.body.appendChild(aux);
+	
+function copyToClipboard() {
+    var classes = this.classList;
+	classes.remove("copied");
+
+    aux.setAttribute("value", this.outerHTML);
+    aux.select();
+    document.execCommand("copy");
+
+	classes.add("copied");
+}
+
+var standardIconsSet = [
+	['smile2', 'wink', 'smile', 'happy', 'yay', 'amazed', 'amazed2', 'amazed3'],
+	['mad3', 'perky', 'glasses', 'wink2', 'embarrassed', 'oops', 'mad4', 'aybby'],
+	['happytongue', 'happytongue2', 'inlove', 'sadtongue', 'sadtongue2', 'nevermind2', 'nevermind3', 'resentful'],
+	['tongue2', 'tongue', 'meh', 'injured', 'nevermind', 'meh2', 'suspicious', 'watchingyou2'],
+	['dead', 'thoughtful', 'thoughtful2', 'lol', 'confused', 'sad', 'discomfort', 'pain'],
+	['weird', 'angry2', 'watchingyou', 'angry', 'suspicious2', 'surprised', 'pain2', 'shocked'],
+	['mad', 'evil', 'evil2', 'devil', 'devil2', 'angel', 'nerd', 'noface'],
+	['target', 'ban']
+];
+
+var sketchyIconsSet = [
+	['smile2', 'smile', 'perky', 'wink', 'happytongue', 'devil'],
+	['injured', 'weird', 'thoughtful', 'thoughtful2', 'surprised', 'pain'],
+	['sad', 'discomfort', 'confused', 'lol', 'watchingyou'],
+];
+
+var feelIconsSet = [
+	['happy','happy2','happy3','happy4','happy5','happy6','happy7','happy8'],
+	['thankful','excited','excited2','excited3','excited4','excited5','excited6','excited7',],
+	['empty','joyful','blessed','blessed2','rich','rich2','inlove2','inlove'],
+	['tongue2','ashamed','tongue4','tongue6','tongue3','tongue','tongue5'],
+	['annoyed','annoyed2','annoyed','worried','worried3','worried2','frustrated'],
+	['upset2','ashamed2','upset3','upset5','upset4','sad','broken','poor'],
+	['upset','surprised','scared','surprised2','lonely', 'exclamation'],
+];
+
+var memeIconsSet = [
+	['trollface','challenge','alone','alone-happy','grin','lol'],
+	['trollface-sad','trollface2','trolldad','trollface-sir','trollface-fem','trollface-fem2'],
+	['happy','pleased','hehe','excited2','bigsmile','epicwin'],
+	['excited','ewbte','tongue-down','tongue-up','pffr','pfftch'],
+	['normal','normal2','wait','notsure','questioning','suspicious'],
+	['yeah','yeah-fem','frown','what','dumbfounded','side-mouth'],
+	['okay','hmm','pokerface','ayfkm','herpderp','notokay'],
+	['megusta','megusta2','megusta-disappoint','disappoint','milk','milk-hairy'],
+	['tobey','please','please2','please-sad','please-scared','chan'],
+	['unhappy','sweaty','herp','rage-eyes','fuu','fuu2'],
+	['angry','angry2','furious','megarage','darkstare','rage-cat'],
+	['crying','horror','why','why2','yuno','canadian'],
+	['seriously','cereal-angry','reddit-rage','reddit-sad','longneck', 'what2'],
+	['derpina','derpina2','derpina-frown','fuu-derpina','fuu-derpina2']
+];
+
+function addEmos(title, iconsSet, emoClass){
+	var emoBlock = document.querySelectorAll(".emos");
+	
+	var inner = document.createElement("div");
+	inner.classList.add("description");
+	inner.id = emoClass;
+	var titleElement = document.createElement("h3");
+	titleElement.innerHTML = title;
+	
+	inner.appendChild(titleElement);
+	emoBlock[0].appendChild(inner);
+	
+	for (rowIndex = 0; rowIndex < iconsSet.length; rowIndex++){
+	  var row = document.createElement("div");
+	  row.classList.add("row");
+	  inner.appendChild(row);
+	  for (i = 0; i < iconsSet[rowIndex].length; i++){
+		
+		var outerEmo = document.createElement("div");
+		
+		var emo = document.createElement("span");
+		emo.classList.add('fw', emoClass, iconsSet[rowIndex][i]);
+		emo.addEventListener('click', copyToClipboard);
+		outerEmo.appendChild(emo);
+		
+		var caption = document.createElement("span");
+		caption.innerHTML = iconsSet[rowIndex][i];
+		outerEmo.appendChild(caption);
+		
+		row.appendChild(outerEmo);
+	  }
+	}
+}
+
+addEmos('Standard Emoticons', standardIconsSet, 'fw');
+addEmos('Standard Outlined Emoticons', standardIconsSet, 'fw-o');
+addEmos('Sketchy Emoticons', sketchyIconsSet, 'fw-s'); 
+addEmos('Today I Feel Emoticons', feelIconsSet, 'fw-f'); 
+addEmos('Meme Emoticons', memeIconsSet, 'fw-m'); 
+
+</script>
+</html>
