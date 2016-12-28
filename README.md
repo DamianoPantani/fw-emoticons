@@ -3,10 +3,10 @@
 
 Do you like [Font Awesome Icons](http://fontawesome.io)? You gotta love **Font Wonderful Emoticons!**
 
-- Free ![](demoimgs/smile.png)
-- Lightweight ![](demoimgs/happy.png)
-- Easy to use ![](demoimgs/amazed.png)
-- Reach collection ![](demoimgs/inlove.png) of font-based css emoticons
+- Free ![](readmeimgs/smile.png)
+- Lightweight ![](readmeimgs/happy.png)
+- Easy to use ![](readmeimgs/amazed.png)
+- Reach collection ![](readmeimgs/inlove.png) of font-based css emoticons
 
 No more nasty and heavy images. Perfect for blogs, personal sites, forums, social networks, and pretty much everything you want.
 
@@ -15,7 +15,7 @@ No more nasty and heavy images. Perfect for blogs, personal sites, forums, socia
 Add this line to your head section:
 
 ```html
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/fw_emoticons.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.css">
 ```
 
 You can also [download the repo](https://github.com/DamianSzGithub/fw-emoticons/archive/master.zip), link just css to your page, and edit this component locally if you wish.
@@ -58,6 +58,8 @@ Make sure to customize .fw class to your needs. The most common attributes will 
 ## [DEMO](https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
 ## [ALL ICONS LIST](https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
 
+All fonts families weight half a MB in total, but don't worry about that. Each one is downloaded from the host in the moment of the client reference, so if you use one only, it will be transfered exclusively.
+
 ## Animations
 
 Animations are perfect supplementation for this component. It's nicely working with [Animate.css](https://daneden.github.io/animate.css/) framework, but you can also use out of the box ones. List of all animations included in this versions:
@@ -81,7 +83,7 @@ To modify default animation behavior you can add these classes respectively, ins
 To replace existing smileys in your page (e.q. `:)` `:D` `:-(` ) with fw-emoticons, link this js:
 
 ```html
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/fw_emoticons.js">
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.js">
 ```
 
 Then invoke `Emoticons.replace()` function. Example:
