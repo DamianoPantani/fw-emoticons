@@ -55,8 +55,8 @@ Make sure to customize .fw class to your needs. The most common attributes will 
 }
 ```
 
-## [DEMO](https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
-## [ALL ICONS LIST](https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
+## [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
+## [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
 
 All fonts families weight half a MB in total, but don't worry about that. Each one is downloaded from the host in the moment of the client reference, so if you use one only, it will be transfered exclusively.
 
@@ -76,7 +76,7 @@ To modify default animation behavior you can add these classes respectively, ins
 **Iteration count**: `fw-rep-1`, `fw-rep-2` ... `fw-rep-10`
 **Direction**: `fw-reverse`
 
-### [Animations Demo](https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/demo/animations.html)
+### [Animations Demo](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/animations.html)
 
 ## On-the-fly emoticons replacement
 
