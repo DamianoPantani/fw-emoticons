@@ -104,10 +104,10 @@ Then invoke `Emoticons.replace()` function. Example:
 FW-Emoticons is a Freeware component, but it uses third-party font faces. Please refer to the section below for more license details.
 
 ## Credits
-- [Emoticons font (default and outlined)]("http://fontpro.com/emoticons-font-12006"): Purdy Design ([purdydesign.com]("http://www.purdydesign.com")) Free for personal use
-- [Sketchy font]("http://fontpro.com/sketchy-smiley-font-14797"): David Kerkhoff [(hanodedphotography.com)]("http://www.hanodedphotography.com") Donationware
-- [Today I Feel font]("http://fontpro.com/today-i-feel-font-3260"): Kimberly Geswein ([kimberlygeswein.com]("http://www.kimberlygeswein.com")) Free for personal use
-- [Far.Chehre (Meme) font]("http://fontpro.com/far-chehre-font-9520"): Abolfazl Seilsepour ([seilsepour.ir]("http://www.seilsepour.ir")) 100% Free
+- [Emoticons font (default and outlined)](http://fontpro.com/emoticons-font-12006): Purdy Design ([purdydesign.com](http://www.purdydesign.com)) Free for personal use
+- [Sketchy font](http://fontpro.com/sketchy-smiley-font-14797): David Kerkhoff [(hanodedphotography.com)](http://www.hanodedphotography.com) Donationware
+- [Today I Feel font](http://fontpro.com/today-i-feel-font-3260): Kimberly Geswein ([kimberlygeswein.com](http://www.kimberlygeswein.com)) Free for personal use
+- [Far.Chehre (Meme) font](http://fontpro.com/far-chehre-font-9520): Abolfazl Seilsepour ([seilsepour.ir](http://www.seilsepour.ir)) 100% Free
 
 ## Contact
 Any considerations? Problems? Upgrade ideas? Please leave me a message on GitHub (comment any line of any commit) or directly via email: `dejmiens@yahoo.com` Thank you!
