@@ -25,7 +25,7 @@
   font:normal normal normal 22px/1 "FW-Emoticons"; font-size:inherit; text-rendering:auto;
 }
 .fw.fw-o {font-family: "FW-Emoticons-Outline";}
-.fw.fw-s {font-family: "FW-Sketchy";}
+.fw.fw-s {font-family: "FW-Sketchy"; line-height: 6px;}
 .fw.fw-f {font-family: "FW-Feel";}
 .fw.fw-m {font-family: "FW-Meme";}
 
