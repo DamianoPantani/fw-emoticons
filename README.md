@@ -12,23 +12,19 @@ No more nasty and heavy images. Perfect for blogs, personal sites, forums, socia
 
 ## Installation
 
-Add this line to your head section:
-
 ```html
 <link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.css">
 ```
 
-You can also [download the repo](https://github.com/DamianSzGithub/fw-emoticons/archive/master.zip), link just css to your page, and edit this component locally if you wish.
+You can also [download the repo](https://github.com/DamianSzGithub/fw-emoticons/archive/master.zip), and link just css.
 
 ## Usage
-
-Main pattern to insert emoticon to your page looks like follow:
 
 ```html
 <ANY class="fw EMO_TYPE EMO_NAME"></ANY>
 ```
 
-**EMO_TYPE** in the current version can be one of following:
+**EMO_TYPE**s of the current version:
 
 - no type specified - Default font
 - `fw-o` - Default font outlined
@@ -55,14 +51,14 @@ Make sure to customize .fw class to your needs. The most common attributes will 
 }
 ```
 
-## [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
-## [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
+### [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
+### [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
 
-All fonts families weight half a MB in total, but don't worry about that. Each one is downloaded from the host in the moment of the client reference, so if you use one only, it will be transfered exclusively.
+**NOTE:** All fonts families weights half a MB in total, but don't worry about that. Each one is downloaded from the host in the moment of the client reference, so if you use one only, it will be transfered exclusively.
 
 ## Animations
 
-Animations are perfect supplementation for this component. It's nicely working with [Animate.css](https://daneden.github.io/animate.css/) framework, but you can also use out of the box ones. List of all animations included in this versions:
+Animations are perfect supplementation for this component. It's nicely working with [Animate.css](https://daneden.github.io/animate.css/) framework, but you can also use out of the box ones:
 
 - `fw-shake`
 - `fw-spin`
@@ -70,7 +66,7 @@ Animations are perfect supplementation for this component. It's nicely working w
 - `fw-updown`
 - `fw-bounce`
 
-To modify default animation behavior you can add these classes respectively, instead of modifying css sheet:
+Instead of modifying css sheet to your needs you can add these classes respectively:
 - **Duration**: `fw-100ms`, `fw-200ms` ... `fw-3000ms`
 - **Delay**:`fw-d1s`, `fw-d2s` ... `fw-d10s`
 - **Iteration count**: `fw-rep-1`, `fw-rep-2` ... `fw-rep-10`
