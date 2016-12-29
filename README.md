@@ -86,16 +86,19 @@ To replace existing smileys in your page (e.q. `:)` `:D` `:-(` ) with fw-emotico
 <link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.js">
 ```
 
-Then invoke `Emoticons.replace()` function. Example:
+Then invoke `new Emoticons().replace()` function. Example:
 
 ```javascript
-(function() {
-	Emoticons.replace({
-		selector: '.comments, .about-me > .text',   // CSS rule looking for smileys
-		mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
-		emoTag: 'i'                                 // OPTIONAL. HTML tag of emoticons
-	  });
-})();
+new Emoticons().replace({
+	selector: '.comments, .about-me > .text',   // CSS rule looking for smileys
+	mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
+	emoTag: 'i',                                // OPTIONAL. HTML tag of emoticons
+	emoMap: { 									// OPTIONAL. Modify default mappings. Values can be either strings or string arrays
+	    'smile': ':)',
+		'happy': ':D',
+		'sad': [':(', ';(', ':sad:']
+	}                                
+});
 ```
 
 

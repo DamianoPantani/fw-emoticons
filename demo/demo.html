@@ -7,6 +7,21 @@
 <link rel="stylesheet" type="text/css" media="all" href="../dist/fw_emoticons.css">
 <script src="../dist/fw_emoticons.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<style>
+.half {
+  width: 48%;
+  display: inline-table;
+  box-sizing: border-box;
+  padding: 6px;
+}
+small {
+  font-style: italic;
+  color: #ccc;
+}
+.fw {
+  font-size: 22px !important;
+}
+</style>
 </head>
 
 <body>
@@ -17,20 +32,50 @@
 	<div class="description">	
 		TODO DEMO
 	</div>
+	<div class="description">	
+		<h3>On-the-fly emoticons replacement demo</h3>
+		<pre>
+			new Emoticons().replace({
+			&nbsp;&nbsp;selector: '#replaceMe > span',
+			&nbsp;&nbsp;emoMap: {
+			&nbsp;&nbsp;&nbsp;&nbsp;'happy': 'xD',
+			&nbsp;&nbsp;&nbsp;&nbsp;'dead': [':x', ':dead:'],
+			&nbsp;&nbsp;&nbsp;&nbsp;'devil': ':devil:'
+			&nbsp;&nbsp;}
+			});
+		</pre>
+		<div class="half" id="originalText">
+			<h3>Original Text</h3>
+			<span>
+				[...]
+				He did not know what injury she might have sustained :( She might have been seriously hurt, if not actually killed :x And why?
+				Simply to make it possible for him to win :devil: The deacon shivered as he thought of it, and urged his horse to greater speed xD
+				[...]
+			</span>
+		</div>
+		<div class="half" id="replaceMe">
+		  <h3>Replaced Text</h3>
+		  <span>
+			<!-- Original text copied by js -->
+		  </span>
+		</div>
+		<p><small>How the Widow Won the Deacon, by William James Lampton</small></p>
+	</div>
 	
 	<div class="cover">By Damiano Pantani. <a href="https://github.com/DamianSzGithub/fw-emoticons" target="_blank">Github Repo</a>. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">Bike Stats</a></div>
 </body>
 <script>
+var originalText = document.querySelectorAll('#originalText span');
+var copyToElement = document.querySelectorAll('#replaceMe span');
+copyToElement[0].innerText = originalText[0].innerText;
 
-/*
-(function() {
-	Emoticons.replace({
-		selector: '.comments, .about-me > .text',   // CSS rule looking for smileys
-		mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
-		emoTag: 'i'                                 // OPTIONAL. HTML tag of emoticons
-	  });
-})();
-*/
-
+new Emoticons().replace({
+  selector: '#replaceMe  > span',
+  emoMap: {
+	'happy': 'xD',
+    'dead': [':x', ':dead:'],
+	'devil': ':devil:'
+  }
+});
 </script>
 </html>

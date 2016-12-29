@@ -116,11 +116,10 @@ noscript h2{
   vertical-align: bottom;
 }
 .cover .fw {
-  display: inline;
+  vertical-align: initial;
 }
 .description .fw {
   font-size: 20px;
-  vertical-align: sub;
 }
 .emos .fw {
   line-height: 60px;
