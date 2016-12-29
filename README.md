@@ -40,21 +40,19 @@ You can also [download the repo](https://github.com/DamianSzGithub/fw-emoticons/
 <span class="fw fw-s pain"></span>
 ```
 
-Make sure to customize .fw class to your needs. The most common attributes will be:
+The most common attributes you may want to customize are:
 ```css
-.somediv .fw {
-    transform: scaleX(-1);                  /* Flip horizontally */
-    text-shadow: 0 0 1px rgba(0,0,0,0.15);  /* make 'em smooth! */
-    vertical-align: middle;
-    font-size: 22px;
-    color: red;
-}
+transform: scaleX(-1);                  /* Flip horizontally */
+text-shadow: 0 0 1px rgba(0,0,0,0.15);  /* make 'em smooth! */
+vertical-align: middle;
+font-size: 22px;
+color: red;
 ```
 
 ### [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
 ### [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
 
-**NOTE:** All fonts families weights half a MB in total, but don't worry about that. Each one is downloaded from the host in the moment of the client reference, so if you use one only, it will be transfered exclusively.
+**NOTE:** All fonts families weights half a MB in total, but don't worry. Each one is downloaded in the moment of first reference, so if you use one only, it will be transfered exclusively.
 
 ## Animations
 
@@ -76,10 +74,10 @@ Instead of modifying css sheet to your needs you can add these classes respectiv
 
 ## On-the-fly emoticons replacement
 
-To replace existing smileys in your page (e.q. `:)` `:D` `:-(` ) with fw-emoticons, link this js:
+To replace existing smileys in your page (e.q. `:)`, `:D`, `:-(`) with fw-emoticons, link this js:
 
 ```html
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.js">
+<script src="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.js"></script>
 ```
 
 Then invoke `new Emoticons().replace()` function. Example:
@@ -96,7 +94,6 @@ new Emoticons().replace({
 	}                                
 });
 ```
-
 
 ## License
 
