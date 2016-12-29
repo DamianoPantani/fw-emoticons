@@ -71,7 +71,7 @@ Animations are perfect supplementation for this component. It's nicely working w
 - `fw-bounce`
 
 To modify default animation behavior you can add these classes respectively, instead of modifying css sheet:
-- **Duration**: `fw-100ms`, `fw-200ms` ... `fw-2000ms`
+- **Duration**: `fw-100ms`, `fw-200ms` ... `fw-3000ms`
 - **Delay**:`fw-d1s`, `fw-d2s` ... `fw-d10s`
 - **Iteration count**: `fw-rep-1`, `fw-rep-2` ... `fw-rep-10`
 - **Direction**: `fw-reverse`

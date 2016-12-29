@@ -312,6 +312,16 @@
 .fw-1800ms {animation-duration: 1.8s}
 .fw-1900ms {animation-duration: 1.9s}
 .fw-2000ms {animation-duration: 2s}
+.fw-2100ms {animation-duration: 2.1s}
+.fw-2200ms {animation-duration: 2.2s}
+.fw-2300ms {animation-duration: 2.3s}
+.fw-2400ms {animation-duration: 2.4s}
+.fw-2500ms {animation-duration: 2.5s}
+.fw-2600ms {animation-duration: 2.6s}
+.fw-2700ms {animation-duration: 2.7s}
+.fw-2800ms {animation-duration: 2.8s}
+.fw-2900ms {animation-duration: 2.9s}
+.fw-3000ms {animation-duration: 3s}
 
 .fw-d1s {animation-delay: 1s}
 .fw-d2s {animation-delay: 2s}
