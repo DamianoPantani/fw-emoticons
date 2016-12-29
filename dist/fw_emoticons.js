@@ -36,17 +36,17 @@
 					if (options.emoMap.hasOwnProperty(emoClass)) {
 						var emoArray = options.emoMap[emoClass];
 						emoArray.forEach(function(emo){
-							content = content.replace(emo, '<'+options.emoTag+' class="fw '+options.mainClass+' '+emoClass+'"></'+options.emoTag+'>');
-							console.log(content);
+							if(content.indexOf(emo) !== -1){
+								content = content.split(emo).join('<'+options.emoTag+' class="fw '+options.mainClass+' '+emoClass+'"></'+options.emoTag+'>');
+							}
 						});
 					}
 				}
-				
 				element.innerHTML = content;
 			});
 		}
 		
 		return Emoticons;
-
+		
 	})();
 }).call(this);
