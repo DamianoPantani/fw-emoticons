@@ -48,8 +48,8 @@ small {
 			<h3>Original Text</h3>
 			<span>
 				[...]
-				He did not know what injury she might have sustained :( She might have been seriously hurt, if not actually killed :x And why?
-				Simply to make it possible for him to win :devil: The deacon shivered as he thought of it, and urged his horse to greater speed xD xD
+				He did not know what injury she might have sustained :( She might have been <strong>seriously</strong> hurt, if not actually killed :x And why?
+				Simply to make it possible for him to win :devil: The deacon <strong>shivered</strong> as he thought of it, and urged his horse to greater speed xD xD
 				[...]
 			</span>
 		</div>
@@ -67,7 +67,7 @@ small {
 <script>
 var originalText = document.querySelectorAll('#originalText span');
 var copyToElement = document.querySelectorAll('#replaceMe span');
-copyToElement[0].innerText = originalText[0].innerText;
+copyToElement[0].innerHTML = originalText[0].innerHTML;
 
 new Emoticons().replace({
   selector: '#replaceMe  > span',
