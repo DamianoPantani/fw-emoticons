@@ -94,6 +94,8 @@ new Emoticons().replace({
 });
 ```
 
+Default emoticons mapping can be easily accessed and modified in the fw_emoticons.js file.
+
 ## License
 
 FW-Emoticons is a Freeware component, but it uses third-party font faces. Please refer to the section below for more license details.
