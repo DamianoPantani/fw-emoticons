@@ -102,8 +102,11 @@ noscript h2{
 }
 .row>div {
   display: inline-block;
-  line-height: 30px;
+  line-height: 36px;
   position: relative;
+}
+#fw-m .row>div {
+  line-height: 30px;
 }
 .row>div>span:not(.fw) {
   display: block;
