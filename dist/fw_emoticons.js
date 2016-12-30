@@ -1,4 +1,6 @@
 //TODO fix frozing issue
+//TODO minify
+//TODO jshint
 
 (function() {
 	this.Emoticons = (function() {
@@ -6,10 +8,27 @@
 		function Emoticons() {}
 		
 		Emoticons.prototype.defaultEmoMap = {
-			//TODO add more
+			'smile': [':)',':}',':]'],
+			'wink': [';)',';}',';]'],
+			'happy': [':D',';D'],
 			'sad': [':('],
-			'smile': [':)', ':}', ':]'],
-			'happy': [';D']
+			'glasses': ['8)','8]','8}'],
+			'happytongue': [':P',';P'],
+			'meh': [':|'],
+			'dead': [':X'],
+			'lol': ['o_O', 'O_o', 'o.O', 'O.o', ':lol:'],
+			'shocked': [':O'],
+			'thoughtful': [':/'],
+			'thoughtful2': [':\\'],
+			'nerd': [':nerd:'],
+			'inlove': [':inlove:'],
+			'angry': [':angry:'],
+			'mad': [':mad:'],
+			'evil2': [':evil:'],
+			'devil': [':devil:'],
+			'angel': [':angel:'],
+			'target': [':target:'],
+			'ban': [':ban:']
 		};
 		
 		Emoticons.prototype.mergeWithDefaultMap = function(userMap){

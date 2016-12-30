@@ -8,8 +8,6 @@ Do you like [Font Awesome Icons](http://fontawesome.io)? You gotta love **Font W
 - Easy to use ![](readmeimgs/amazed.png)
 - Reach collection ![](readmeimgs/inlove.png) of font-based css emoticons
 
-No more nasty and heavy images. Perfect for blogs, personal sites, forums, social networks, and pretty much everything you want.
-
 ## Installation
 
 ```html
@@ -52,7 +50,8 @@ color: red;
 ### [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
 ### [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
 
-**NOTE:** All fonts families weights half a MB in total, but don't worry. Each one is downloaded in the moment of first reference, so if you use one only, it will be transfered exclusively.
+**NOTE 1.** This component was made for author's personal purposes only. It may contain lots of gaps or not fit on your page as expected. Ping me in case of doubt, details below.
+**NOTE 2.** All fonts families weights half a MB in total, but don't worry. Each one is downloaded in the moment of first reference, so if you use one only, it will be transfered exclusively.
 
 ## Animations
 
