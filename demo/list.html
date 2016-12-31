@@ -11,7 +11,7 @@
 
 <body>
 	<div class="cover">
-	    <h1>FW Emoticons<span class="fw fw-o glasses"></span></h1>
+	    <h1>FW Emoticons<i class="fw fw-o glasses"></i></h1>
 		<h5>Font-based CSS emoticons set</h5>
 	</div>
 	<div class="description">
@@ -102,7 +102,7 @@ function addEmos(title, iconsSet, emoClass){
 		
 		var outerEmo = document.createElement("div");
 		
-		var emo = document.createElement("span");
+		var emo = document.createElement("i");
 		emo.classList.add('fw', emoClass, iconsSet[rowIndex][i]);
 		emo.addEventListener('click', copyToClipboard);
 		outerEmo.appendChild(emo);

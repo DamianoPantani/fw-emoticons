@@ -108,7 +108,7 @@ noscript h2{
 #fw-m .row>div {
   line-height: 30px;
 }
-.row>div>span:not(.fw) {
+.row>div>span {
   display: block;
   color: rgba(0,0,0,0.7);
   font-size: 12px;
