@@ -67,7 +67,7 @@ noscript h2{
   padding: 20px 0;
 }
 
-.description {
+.centerblock {
   text-align: justify;
   margin: 20px auto;
   background-color: rgba(255,255,255, 0.5);
@@ -79,11 +79,11 @@ noscript h2{
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.07);
 }
 
-.description h3{
+.centerblock h3{
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.description td {
+.centerblock td {
   padding: 5px 0;
   font-family: monospace;
 }
@@ -92,7 +92,7 @@ noscript h2{
   margin-bottom: 30px;
 }
 
-.description#meme{
+.centerblock#meme{
   padding-top: 40px;
 }
 
@@ -121,7 +121,7 @@ noscript h2{
 .cover .fw {
   vertical-align: initial;
 }
-.description .fw {
+.centerblock .fw {
   font-size: 20px;
 }
 .emos .fw {
