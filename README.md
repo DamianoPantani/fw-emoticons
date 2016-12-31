@@ -94,7 +94,7 @@ new Emoticons().replace({
 });
 ```
 
-Default emoticons mapping can be easily accessed and modified in the fw_emoticons.js file.
+Default emoticons mapping can be easily accessed and modified in the `fw_emoticons.js` file.
 
 ## License
 
