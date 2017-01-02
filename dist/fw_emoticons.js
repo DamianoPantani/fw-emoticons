@@ -63,7 +63,7 @@
 				}
 				element.innerHTML = content;
 			});
-		}
+		};
 		
 		return Emoticons;
 		
