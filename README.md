@@ -47,8 +47,8 @@ font-size: 22px;
 color: red;
 ```
 
-### [DEMO](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/demo.html)
-### [ALL ICONS LIST](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/list.html)
+### [JSFiddle Demo](https://jsfiddle.net/z7s2qsp0/)
+### [All Icons List](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/list.html)
 
 - **NOTE 1.** This component was made for author's personal purposes only. It may contain lots of gaps or not fit on your page as expected. Ping me in case of doubt, details below.
 - **NOTE 2.** All fonts families weights half a MB in total, but don't worry. Each one is downloaded in the moment of first reference, so if you use one only, it will be transfered exclusively.
