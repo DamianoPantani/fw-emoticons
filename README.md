@@ -11,10 +11,10 @@ Do you like [Font Awesome Icons](http://fontawesome.io)? You gotta love **Font W
 ## Installation
 
 ```html
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.css">
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
 ```
 
-You can also [download the repo](https://github.com/DamianSzGithub/fw-emoticons/archive/master.zip), and link just css.
+You can also [download the repo](https://github.com/DamianoPantani/fw-emoticons/archive/master.zip), and link just css.
 
 ## Usage
 
@@ -47,8 +47,8 @@ font-size: 22px;
 color: red;
 ```
 
-### [DEMO](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/demo.html)
-### [ALL ICONS LIST](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/list.html)
+### [DEMO](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/demo.html)
+### [ALL ICONS LIST](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/list.html)
 
 - **NOTE 1.** This component was made for author's personal purposes only. It may contain lots of gaps or not fit on your page as expected. Ping me in case of doubt, details below.
 - **NOTE 2.** All fonts families weights half a MB in total, but don't worry. Each one is downloaded in the moment of first reference, so if you use one only, it will be transfered exclusively.
@@ -69,14 +69,14 @@ Instead of modifying css sheet to your needs you can add these classes respectiv
 - **Iteration count**: `fw-rep-1`, `fw-rep-2` ... `fw-rep-10`
 - **Direction**: `fw-reverse`
 
-### [Animations Demo](https://rawgit.com/DamianSzGithub/fw-emoticons/master/demo/animations.html)
+### [Animations Demo](https://rawgit.com/DamianoPantani/fw-emoticons/master/demo/animations.html)
 
 ## On-the-fly emoticons replacement
 
 To replace existing smileys in your page (e.q. `:)`, `:D`, `:-(`) with fw-emoticons, link this js:
 
 ```html
-<script src="https://cdn.rawgit.com/DamianSzGithub/fw-emoticons/master/dist/fw_emoticons.js"></script>
+<script src="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.js"></script>
 ```
 
 Then invoke `new Emoticons().replace()` function. Example:
