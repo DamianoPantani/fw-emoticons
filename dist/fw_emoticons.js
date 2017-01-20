@@ -14,7 +14,7 @@ Emoticons.prototype.defaultEmoMap = {
 'dead': [':X'],
 'lol': ['o_O', 'O_o', 'o.O', 'O.o', ':lol:'],
 'shocked': [':O'],
-'thoughtful': [':/'],
+'thoughtful': [' :/'], // space protects replacement in links
 'thoughtful2': [':\\'],
 'nerd': [':nerd:'],
 'inlove': [':inlove:'],
