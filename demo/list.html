@@ -26,17 +26,16 @@
 
 var aux = document.createElement("input");
 document.body.appendChild(aux);
-	
-function copyToClipboard() {
-    var classes = this.classList;
-	classes.remove("copied");
-
-    aux.setAttribute("value", this.outerHTML);
-    aux.select();
-    document.execCommand("copy");
-
-	classes.add("copied");
-}
+document.body.addEventListener('click', function(ev) {
+	var classes = ev.target.classList;
+	if(classes.contains('fw')){
+		classes.remove("copied");
+		aux.setAttribute("value", ev.target.outerHTML);
+		aux.select();
+		document.execCommand("copy");
+		classes.add("copied");
+	}
+});
 
 var standardIconsSet = [
 	['smile2', 'wink', 'smile', 'happy', 'yay', 'amazed', 'amazed2', 'amazed3'],
@@ -104,7 +103,6 @@ function addEmos(title, iconsSet, emoClass){
 		
 		var emo = document.createElement("i");
 		emo.classList.add('fw', emoClass, iconsSet[rowIndex][i]);
-		emo.addEventListener('click', copyToClipboard);
 		outerEmo.appendChild(emo);
 		
 		var caption = document.createElement("span");
