@@ -1,0 +1,115 @@
+<html>
+<head>
+<script src="../dist/fw_emoticons.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../dist/fw_emoticons.css">
+<style>
+body {
+  font-size: 22px;
+  margin-top: 40px;
+}
+.fw {
+  vertical-align: baseline;
+}
+
+.blackdiv {
+  color: white;
+  background-color: black;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chan {
+  margin-right: -16px;
+}
+h2 {
+  margin-top: 80px;
+}
+.half {
+  width: 48%;
+  display: inline-table;
+  box-sizing: border-box;
+  padding: 22px 10px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+.half h3 {
+  margin-top: 0;
+}
+small {
+  font-style: italic;
+  color: #888;
+}
+
+.one{
+  font-size: 26px;
+  color: #ddd;
+}
+.two{
+  font-size: 50px;
+  color: #aaa;
+}
+.thr{
+  font-size: 66px;
+  color: #777;
+}
+.fou{
+  font-size: 90px;
+}
+</style>
+</head>
+<body>
+
+<div class="centerblock">	
+<div>
+Lorem ipsum dolor sit amet <i class="fw fw-s idea"></i> eum et nemore hendrerit, delenit complectitur eam ut. Doming fabulas vim at <i class="fw fw-s agony2"></i> ne fierent interpretaris mel. Cum an fugit tritani conceptam, ea qui zril similique. Viderer numquam labores usu at soluta graecis vituperatoribus pri id <i class="fw fw-s demon"></i> Ne ius veritus nominavi, ei odio gloriatur eum <i class="fw fw-s smile"></i> At eirmod adipisci scriptorem vis, pri ne sonet dicam scripserit.<br><br>
+</div>
+
+<i class="fw fw-m chan one"></i>
+<i class="fw fw-m chan two"></i>
+<i class="fw fw-m chan thr"></i>
+<i class="fw fw-m chan fou"></i>
+<i class="fw fw-m chan thr"></i>
+<i class="fw fw-m chan two"></i>
+<i class="fw fw-m chan one"></i>
+
+<br><br>
+
+<div class="blackdiv">
+Alia dicat definitionem ex pro <i class="fw fw-o nevermind2"></i> ne alii tation disputationi mei. Reque dicta est eu, elit nobis molestie ut sea. Cum nibh apeirian cu <i class="fw fw-o oops"></i> id qui novum oporteat honestatis. Brute assum per te. No quas doming argumentum vel, ut sea facer alterum cum integre fabulas senserit ex. In elit integre veritus has, veri interesset et quo <i class="fw fw-o ban"></i>
+</div>
+
+<div>
+    <h2>On-the-fly emoticons replacement demo</h2>
+	<div class="half" id="originalText">
+		<h3>Original Text</h3>
+		<span>
+			He did not know what injury she might have sustained :( She might have been <strong>seriously</strong> hurt, if not actually killed :x And why?
+			Simply to make it possible for him to win :devil: The deacon <strong>shivered</strong> as he thought of it, and urged his horse to greater speed xD xD
+		</span>
+	</div>
+	<div class="half" id="replaceMe">
+	  <h3>Processed Text</h3>
+	  <span>
+		<!-- Original text copied by js, then processed -->
+	  </span>
+	</div>
+	<p><small>How the Widow Won the Deacon, by William James Lampton</small></p>
+	<p><strong>NOTE:</strong> :devil: and :( smileys are mapped by default, hence they also have been replaced with aprioriate emoticons. Default emoticons mapping can be easily accessed and modified in the `fw_emoticons.js` file.</p>
+</div>
+</body>
+
+<script>
+var originalText = document.querySelectorAll('#originalText span');
+var copyToElement = document.querySelectorAll('#replaceMe span');
+copyToElement[0].innerHTML = originalText[0].innerHTML;
+
+new Emoticons().replace({
+  selector: '#replaceMe  > span',
+  emoMap: {
+	'happy': 'xD',
+    'dead': [':x', ':dead:']
+  }
+});
+</script>
