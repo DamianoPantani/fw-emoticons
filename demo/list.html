@@ -28,7 +28,8 @@ var aux = document.createElement("input");
 document.body.appendChild(aux);
 document.body.addEventListener('click', function(ev) {
 	var classes = ev.target.classList;
-	if(classes.contains('fw')){
+	var parent = ev.target.parentElement.tagName;
+	if(classes.contains('fw') && parent === 'DIV'){
 		classes.remove("copied");
 		aux.setAttribute("value", ev.target.outerHTML);
 		aux.select();
