@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Default fw-emoticons mapping</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" media="all" href="../dist/fw_emoticons.css">
+<script src="../dist/fw_emoticons.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+	<div class="centerblock">
+	<h4>Mapping of default emoticons set</h4>
+	</div>
+	<noscript><h2>Turn on JavaScripts to see content of the page</h2></noscript>
+	<div class="centerblock emos">
+	</div>
+<script>
+	var mapping = new Emoticons().defaultEmoMap;
+	var emos = document.querySelectorAll(".emos")[0];
+
+	for (var emoClass in mapping) {
+		if (mapping.hasOwnProperty(emoClass)) {
+			var emoArray = mapping[emoClass];
+			
+			var emoBlock = document.createElement("div");
+			
+			var emoIcon = document.createElement("i");
+			emoIcon.classList.add('fw', emoClass);
+			
+			var caption = document.createElement("span");
+			caption.innerHTML = emoArray;
+			
+			caption.innerHTML = caption.innerHTML.split(',').join(' ');
+			emoBlock.appendChild(emoIcon);
+			emoBlock.appendChild(caption);
+			
+			emos.appendChild(emoBlock);
+		}
+	}
+</script>
+</body>
+</html>
