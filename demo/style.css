@@ -1,6 +1,6 @@
 
 body {
-  background-color: rgba(255, 128, 0, 0.1);
+  background-color: rgba(0, 255, 255, 0.05);
   margin: 0;
   color: #333;
   font-family: "Roboto", sans-serif;
@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5,h6 {
 
 a {
   text-decoration: none;
-  color: rgb(255, 128, 0);
+  color: rgb(0, 200, 200);
   transition: all 0.1s;
 }
 a:hover {
-  color: rgb(255, 160, 0);
+  color: rgb(0, 220, 220);
 }
 
 strong {
