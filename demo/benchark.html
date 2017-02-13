@@ -28,6 +28,7 @@ it :nerd::nerd::nerd::nerd::nerd::nerd::nerd: shouldn't :mad::mad::mad::mad::mad
 </div>
 
 <div id="extremeLevel" class="hidden">
+<p>
 Lorem :D:D ipsum xDDD dolor :):):):):) sit xDXDXDXDXDXD amet:}:}:}:}:}:}:}:}:}:} consectetur :]:]:]:]:]:]:]:] adipiscing :-):-):-):-):-):-):-) elit:-}:-}:-}:-}:-}:-}:-}:-} Duis ;-];-];-];-];-];-];-]
 dolor :D:D:D:D:D:D:D:D:D:D:D:D mauris:[:[:[:[:[:[:[:[:[ tempor B-]B-]B-]B-]B-]B-]B-] et :{:{:{:{:{:{:{:{:{ dignissim o.0o.0o.0o.0o.0o.0o.0o.0o.0o.0 nec ;-p;-p;-p;-p;-p;-p;-p congue ;-(;-(;-(;-(;-(;-(;-(;-(;-(
 dignissim ;-p;-p;-p;-p;-p;-p;-p;-p;-p tortor B-}B-}B-}B-}B-}B-}B-} Duis :-D:-D:-D:-D:-D:-D:-D:-D:-D ante XDXDXDXDXDXDXDXD lacus ;-o;-o;-o;-o;-o;-o;-o maximus :O:O:O:O:O:O:O:O:O id  :\:\:\:\:\:\:\:\
@@ -47,7 +48,7 @@ a ;[;[;[;[;[;[;[;[;[ ex :{:{:{:{:{:{:{:{:{:{:{:{:{ bibendum xDxDxDxDxDxDxDxDxDxD
 amet :target::target::target::target::target::target::target::target::target: ex ;-\;-\;-\;-\;-\;-\;-\ Phasellus :x:x:x:x:x:x:x:x sit :-P:-P:-P:-P:-P:-P:-P:-P:-P amet :-D:-D:-D:-D:-D:-D:-D:-D:-D:-D
 lacus :nerd::nerd::nerd::nerd::nerd::nerd::nerd::nerd::nerd: feugiat o_0o_0o_0o_0o_0o_0o_0o_0o_0 consequat :-P:-P:-P:-P:-P:-P:-P:-P:-P odio 8-}8-}8-}8-}8-}8-}8-}8-}8-}8-} nec 8-]8-]8-]8-]8-]8-]8-]8-]8-]
 ullamcorper B-]B-]B-]B-]B-]B-]B-]B-]B-] turpis :D:D:D:D:D:D:D:D:D:D Vestibulum :-D:-D:-D:-D:-D:-D:-D:-D finibus ;-P;-P;-P;-P;-P;-P;-P;-P;-P leo ;\;\;\;\;\;\;\;\ eget ;O;O;O;O;O;O;O molestie :P:P:P:P:P:P:P:P:P:P luctus.
-
+</p>
 <p>
 Lorem :D:D ipsum xDDD dolor :):):):):) sit xDXDXDXDXDXD amet:}:}:}:}:}:}:}:}:}:} consectetur :]:]:]:]:]:]:]:] adipiscing :-):-):-):-):-):-):-) elit:-}:-}:-}:-}:-}:-}:-}:-} Duis ;-];-];-];-];-];-];-]
 dolor :D:D:D:D:D:D:D:D:D:D:D:D mauris:[:[:[:[:[:[:[:[:[ tempor B-]B-]B-]B-]B-]B-]B-] et :{:{:{:{:{:{:{:{:{ dignissim o.0o.0o.0o.0o.0o.0o.0o.0o.0o.0 nec ;-p;-p;-p;-p;-p;-p;-p congue ;-(;-(;-(;-(;-(;-(;-(;-(;-(
@@ -96,23 +97,22 @@ ullamcorper B-]B-]B-]B-]B-]B-]B-]B-]B-] turpis :D:D:D:D:D:D:D:D:D:D Vestibulum :
 </div>
 
 <script>
-var Emoticons = new Emoticons();
 
 var startTime = new Date();
-Emoticons.replace({selector: '#easyLevel'});
+new Emoticons().replace({selector: '#easyLevel'});
 printResults(new Date()-startTime, 'EASY');
 
 startTime = new Date();
-Emoticons.replace({selector: '#mediumLevel'});
+new Emoticons().replace({selector: '#mediumLevel'});
 printResults(new Date()-startTime, 'MEDIUM');
 
 startTime = new Date();
-Emoticons.replace({selector: '#hardLevel'});
+new Emoticons().replace({selector: '#hardLevel'});
 printResults(new Date()-startTime, 'HARD');
 
 startTime = new Date();
-Emoticons.replace({
-	selector: '#extremeLevel, #extremeLevel p, #extremeLevel i',
+new Emoticons().replace({
+	selector: '#extremeLevel p, #extremeLevel i',
 	emoTag: 'span',
 	mainClass: 'fw-o',
 	emoMap: {
