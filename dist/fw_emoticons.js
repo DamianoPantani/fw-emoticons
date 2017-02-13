@@ -28,37 +28,42 @@ Emoticons.prototype.defaultEmoMap = {
 'ban': [':ban:']
 };
 
-Emoticons.prototype.mergeWithDefaultMap = function(userMap){
+/*TODO: CRITICAL FIX: 	if user passes empty array to map it replaces every sign!*/
+/*TODO: MAJOR FIX: 		if user passes nested selector this it is skiped!*/
+
+Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
 	var newMap = JSON.parse(JSON.stringify(this.defaultEmoMap));//clone
 	for (var emoClass in userMap) {
-		if (userMap.hasOwnProperty(emoClass)) {
-			var emoArray = userMap[emoClass];
-			newMap[emoClass] = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
-		}
+		var emoArray = userMap[emoClass];
+		newMap[emoClass] = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
+	}
+	for (var emoClass in newMap) {
+		newMap[emoClass].forEach(function(emo, i){
+			newMap[emoClass][i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+		});
+		newMap[emoClass] = [new RegExp(newMap[emoClass].join("|")), new RegExp('('+newMap[emoClass].join("|")+')(?![^<]*>|[^<>]*</)', 'gi')];
 	}
 	return newMap;
 };
 
 Emoticons.prototype.replace = function(options){
 	options = options ? options : {};
-	options.mainClass = options.mainClass ? options.mainClass : '';
-	options.emoTag = options.emoTag ? options.emoTag : 'i';
-	options.emoMap = options.emoMap ? options.emoMap : {};
-	options.emoMap = this.mergeWithDefaultMap(options.emoMap);
-	var elements = document.querySelectorAll(options.selector);
-	for (var emoClass in options.emoMap) {
-		if (options.emoMap.hasOwnProperty(emoClass)) {
-			var emoArray = options.emoMap[emoClass];
-			emoArray.forEach(function(emo){
-				var emoPattern = new RegExp('('+emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&')+')(?![^<]*>|[^<>]*</)', 'gi');
-				elements.forEach(function(element) {
-					if(element.innerHTML.indexOf(emo) !== -1){
-						element.innerHTML = element.innerHTML.replace(emoPattern, '<'+options.emoTag+' class="fw '+options.mainClass+' '+emoClass+'"></'+options.emoTag+'>');
-					}
-				});
-			});
+	var mainClass = options.mainClass ? options.mainClass : '';
+	var emoTag = options.emoTag ? options.emoTag : 'i';
+	var emoMap = options.emoMap ? options.emoMap : {};
+	emoMap = this.mergeAndGetRegexMap(emoMap);
+	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
+	var newContentSuffix = '"></'+emoTag+'>';
+	document.querySelectorAll(options.selector).forEach(function(element){
+		var content = element.innerHTML;
+		for (var emoClass in emoMap) {
+			var emoRegex = emoMap[emoClass];
+			if(emoRegex[0].test(content)){
+				content = content.replace(emoRegex[1], newContentPrefix+emoClass+newContentSuffix);
+			}
 		}
-	}
+		element.innerHTML = content;
+	});
 };
 
 return Emoticons;
