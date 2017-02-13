@@ -28,19 +28,14 @@ Emoticons.prototype.defaultEmoMap = {
 'ban': [':ban:']
 };
 
-/*TODO: CRITICAL FIX: 	if user passes empty array to map it replaces every sign!*/
+Emoticons.prototype.defaultEmoRegexMap = convertToRegexMap(Emoticons.prototype.defaultEmoMap);
 
 Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
-	var newMap = JSON.parse(JSON.stringify(this.defaultEmoMap));//clone
+	var newMap = Object.assign({}, this.defaultEmoRegexMap); //clone
 	for (var emoClass in userMap) {
 		var emoArray = userMap[emoClass];
-		newMap[emoClass] = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
-	}
-	for (var emoClass in newMap) {
-		newMap[emoClass].forEach(function(emo, i){
-			newMap[emoClass][i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
-		});
-		newMap[emoClass] = newMap[emoClass].length === 0 ? undefined : new RegExp('('+newMap[emoClass].join("|")+')(?![^<]*>|[^<>]*</)', 'gi');
+		emoArray = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
+		newMap[emoClass] = toRegex(emoArray);
 	}
 	return newMap;
 };
@@ -49,21 +44,35 @@ Emoticons.prototype.replace = function(options){
 	options = options ? options : {};
 	var mainClass = options.mainClass ? options.mainClass : '';
 	var emoTag = options.emoTag ? options.emoTag : 'i';
-	var emoMap = options.emoMap ? options.emoMap : {};
-	emoMap = this.mergeAndGetRegexMap(emoMap);
 	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
 	var newContentSuffix = '"></'+emoTag+'>';
+	var regexMap = options.regexMap ? options.regexMap : {};
+	regexMap = this.mergeAndGetRegexMap(regexMap);
+
 	document.querySelectorAll(options.selector).forEach(function(element){
 		var content = element.innerHTML;
-		for (var emoClass in emoMap) {
-			var emoRegex = emoMap[emoClass];
-			if(emoRegex && emoRegex.test(content)){
-				content = content.replace(emoRegex, newContentPrefix+emoClass+newContentSuffix);
-			}
+		for (var emoClass in regexMap) {
+			content = content.replace(regexMap[emoClass], newContentPrefix+emoClass+newContentSuffix);
 		}
 		element.innerHTML = content;
 	});
 };
+
+function toRegex(emoArray){
+	var newArray = [];
+	emoArray.forEach(function(emo, i){
+		newArray[i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+	});
+	return newArray.length === 0 ? undefined : new RegExp('('+newArray.join("|")+')(?![^<]*>|[^<>]*</)', 'gi');
+}
+
+function convertToRegexMap(emoMap){
+	var regexMap = {};
+	for (var emoClass in emoMap) {
+		regexMap[emoClass] = toRegex(emoMap[emoClass]);
+	}
+	return regexMap;
+}
 
 return Emoticons;
 	
