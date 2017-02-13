@@ -29,7 +29,6 @@ Emoticons.prototype.defaultEmoMap = {
 };
 
 /*TODO: CRITICAL FIX: 	if user passes empty array to map it replaces every sign!*/
-/*TODO: MAJOR FIX: 		if user passes nested selector this it is skiped!*/
 
 Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
 	var newMap = JSON.parse(JSON.stringify(this.defaultEmoMap));//clone
@@ -41,7 +40,7 @@ Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
 		newMap[emoClass].forEach(function(emo, i){
 			newMap[emoClass][i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 		});
-		newMap[emoClass] = [new RegExp(newMap[emoClass].join("|")), new RegExp('('+newMap[emoClass].join("|")+')(?![^<]*>|[^<>]*</)', 'gi')];
+		newMap[emoClass] = newMap[emoClass].length === 0 ? undefined : new RegExp('('+newMap[emoClass].join("|")+')(?![^<]*>|[^<>]*</)', 'gi');
 	}
 	return newMap;
 };
@@ -58,8 +57,8 @@ Emoticons.prototype.replace = function(options){
 		var content = element.innerHTML;
 		for (var emoClass in emoMap) {
 			var emoRegex = emoMap[emoClass];
-			if(emoRegex[0].test(content)){
-				content = content.replace(emoRegex[1], newContentPrefix+emoClass+newContentSuffix);
+			if(emoRegex && emoRegex.test(content)){
+				content = content.replace(emoRegex, newContentPrefix+emoClass+newContentSuffix);
 			}
 		}
 		element.innerHTML = content;
