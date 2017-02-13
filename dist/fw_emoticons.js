@@ -63,7 +63,7 @@ function toRegex(emoArray){
 	emoArray.forEach(function(emo, i){
 		newArray[i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
 	});
-	return newArray.length === 0 ? undefined : new RegExp('('+newArray.join("|")+')(?![^<]*>|[^<>]*</)', 'gi');
+	return newArray.length === 0 ? undefined : new RegExp('('+newArray.join("|")+')(?![^<]*>|[^<>]*</)', 'g');
 }
 
 function convertToRegexMap(emoMap){
