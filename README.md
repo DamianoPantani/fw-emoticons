@@ -95,6 +95,7 @@ new Emoticons().replace({
 ```
 
 Default emoticons mapping ([PREVIEW](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)) can be easily accessed and modified in the `fw_emoticons.js` file.
+
 **NOTE:** Do NOT use nested selectors, e.g. `.comment, .comment p`. It may skip child blocks and cause a slight performance drop in extreme cases. Instead, in this example wrap existing text from `.comment` block in any html tag.
 
 ## License
