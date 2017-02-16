@@ -83,7 +83,7 @@ Then invoke `new Emoticons().replace()` function. Example:
 
 ```javascript
 new Emoticons().replace({
-	selector: '.comments, .about-me > .text',   // CSS rule looking for smileys
+	selector: '.comments, .about-me > .text',   // CSS rule where to look for smileys
 	mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
 	emoTag: 'i',                                // OPTIONAL. HTML tag of emoticons
 	emoMap: { 									// OPTIONAL. Modify default mappings. Values can be either strings or string arrays
@@ -94,7 +94,8 @@ new Emoticons().replace({
 });
 ```
 
-Default emoticons mapping can be easily accessed and modified in the `fw_emoticons.js` file.
+Default emoticons mapping ([PREVIEW](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)) can be easily accessed and modified in the `fw_emoticons.js` file.
+**NOTE:** Do NOT use nested selectors, e.g. `.comment, .comment p`. It may skip child blocks and cause a slight performance drop in extreme cases. Instead, in this example wrap existing text from `.comment` block in any html tag.
 
 ## License
 
