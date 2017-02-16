@@ -4,12 +4,12 @@ this.Emoticons = (function() {
 function Emoticons() {}
 
 Emoticons.prototype.defaultEmoMap = {
-'smile': [':)',':}',':]',':>',':-)',':-}',':-]',':->'],
-'wink': [';)',';}',';]',';-)',';-}',';-]',';->'],
+'smile': [':)',':}',':]',':-)',':-}',':-]'],
+'wink': [';)',';}',';]',';-)',';-}',';-]'],
 'happy': [':D',';D',':-D',';-D','xD','xd','XD'],
-'sad': [':(',':{',':[',':<',':-(',':-{',':-[',':-<'],
-'weird': [';(',';{',';[',';<',';-(',';-{',';-[',';-<'],
-'glasses': ['B-)','B-}','B-]','B->','8-)','8-}','8-]','8->'],
+'sad': [':(',':{',':[',':-(',':-{',':-['],
+'weird': [';(',';{',';[',';-(',';-{',';-['],
+'glasses': ['B-)','B-}','B-]','8-)','8-}','8-]'],
 'happytongue': [':P',':p',';P',';p',':-P',';-P',':-p',';-p'],
 'meh': [':|'],
 'dead': [':X',':x',';x',';X'],
@@ -28,38 +28,51 @@ Emoticons.prototype.defaultEmoMap = {
 'ban': [':ban:']
 };
 
-Emoticons.prototype.mergeWithDefaultMap = function(userMap){
-	var newMap = JSON.parse(JSON.stringify(this.defaultEmoMap));//clone
+Emoticons.prototype.defaultEmoRegexMap = convertToRegexMap(Emoticons.prototype.defaultEmoMap);
+
+Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
+	var newMap = Object.assign({}, this.defaultEmoRegexMap); //clone
 	for (var emoClass in userMap) {
-		if (userMap.hasOwnProperty(emoClass)) {
-			var emoArray = userMap[emoClass];
-			newMap[emoClass] = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
-		}
+		var emoArray = userMap[emoClass];
+		emoArray = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];
+		newMap[emoClass] = toRegex(emoArray);
 	}
 	return newMap;
 };
 
 Emoticons.prototype.replace = function(options){
 	options = options ? options : {};
-	options.mainClass = options.mainClass ? options.mainClass : '';
-	options.emoTag = options.emoTag ? options.emoTag : 'i';
-	options.emoMap = options.emoMap ? options.emoMap : {};
-	options.emoMap = this.mergeWithDefaultMap(options.emoMap);
-	var elements = document.querySelectorAll(options.selector);
-	for (var emoClass in options.emoMap) {
-		if (options.emoMap.hasOwnProperty(emoClass)) {
-			var emoArray = options.emoMap[emoClass];
-			emoArray.forEach(function(emo){
-				var emoPattern = new RegExp('('+emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&')+')(?![^<]*>|[^<>]*</)', 'gi');
-				elements.forEach(function(element) {
-					if(element.innerHTML.indexOf(emo) !== -1){
-						element.innerHTML = element.innerHTML.replace(emoPattern, '<'+options.emoTag+' class="fw '+options.mainClass+' '+emoClass+'"></'+options.emoTag+'>');
-					}
-				});
-			});
+	var mainClass = options.mainClass ? options.mainClass : '';
+	var emoTag = options.emoTag ? options.emoTag : 'i';
+	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
+	var newContentSuffix = '"></'+emoTag+'>';
+	var regexMap = options.regexMap ? options.regexMap : {};
+	regexMap = this.mergeAndGetRegexMap(regexMap);
+
+	document.querySelectorAll(options.selector).forEach(function(element){
+		var content = element.innerHTML;
+		for (var emoClass in regexMap) {
+			content = content.replace(regexMap[emoClass], newContentPrefix+emoClass+newContentSuffix);
 		}
-	}
+		element.innerHTML = content;
+	});
 };
+
+function toRegex(emoArray){
+	var newArray = [];
+	emoArray.forEach(function(emo, i){
+		newArray[i] = emo.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+	});
+	return newArray.length === 0 ? undefined : new RegExp('('+newArray.join("|")+')(?![^<]*>|[^<>]*</)', 'g');
+}
+
+function convertToRegexMap(emoMap){
+	var regexMap = {};
+	for (var emoClass in emoMap) {
+		regexMap[emoClass] = toRegex(emoMap[emoClass]);
+	}
+	return regexMap;
+}
 
 return Emoticons;
 	
