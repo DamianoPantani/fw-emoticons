@@ -46,7 +46,7 @@ Emoticons.prototype.replace = function(options){
 	var emoTag = options.emoTag ? options.emoTag : 'i';
 	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
 	var newContentSuffix = '"></'+emoTag+'>';
-	var regexMap = options.regexMap ? options.regexMap : {};
+	var regexMap = options.emoMap ? options.emoMap : {};
 	regexMap = this.mergeAndGetRegexMap(regexMap);
 
 	document.querySelectorAll(options.selector).forEach(function(element){
