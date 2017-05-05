@@ -73,7 +73,7 @@ Instead of modifying css sheet to your needs you can add these classes respectiv
 
 ## On-the-fly emoticons replacement
 
-To replace existing smileys in your page (e.q. `:)`, `:D`, `:-(`) with fw-emoticons, link this js:
+To replace existing smileys in your page (e.q. `:)`, `:-(`, `:D`) with fw-emoticons, link this js:
 
 ```html
 <script src="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.js"></script>
@@ -83,20 +83,20 @@ Then invoke `new Emoticons().replace()` function. Example:
 
 ```javascript
 new Emoticons().replace({
-	selector: '.comments, .about-me > .text',   // CSS rule where to look for smileys
-	mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
-	emoTag: 'i',                                // OPTIONAL. HTML tag of emoticons
-	emoMap: { 									// OPTIONAL. Modify default mappings. Values can be either strings or string arrays
-	    'smile': ':)',
-		'happy': ':D',
-		'sad': [':(', ';(', ':sad:']
-	}                                
+    selector: '.comments, .about-me > .text',   // CSS rule where to look for smileys
+    mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
+    emoTag: 'i',                                // OPTIONAL. HTML tag of emoticons
+    emoMap: {                                   // OPTIONAL. Modify default mappings. Values can be either strings or string arrays
+        'smile': ':)',
+        'happy': ':D',
+        'sad': [':(', ';(', ':sad:']
+    }
 });
 ```
 
 Default emoticons mapping ([PREVIEW](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)) can be easily accessed and modified in the `fw_emoticons.js` file.
 
-**NOTE:** Do NOT use nested selectors, e.g. `.comment, .comment p`. It may skip child blocks and cause a slight performance drop in extreme cases. Instead, in this example wrap existing text from `.comment` block in any html tag.
+**NOTE:** Do NOT use nested selectors, e.g. `.comment, .comment p`. It may skip child blocks and cause a slight performance drop in extreme cases. Instead, in this example run the `replace` function twice, or wrap existing text from `.comment` block in any html tag.
 
 ## License
 
