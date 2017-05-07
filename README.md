@@ -83,7 +83,7 @@ Then invoke `new Emoticons().replace()` function. Example:
 
 ```javascript
 new Emoticons().replace({
-    selector: '.comments, .about-me > .text',   // CSS rule where to look for smileys
+    selector: '.comments, .about-me > .text',   // REQUIRED. CSS rule where to look for smileys
     mainClass: 'fw-o',                          // OPTIONAL. Type of emoticons
     emoTag: 'i',                                // OPTIONAL. HTML tag of emoticons
     emoMap: {                                   // OPTIONAL. Modify default mappings. Values can be either strings or string arrays
@@ -94,9 +94,16 @@ new Emoticons().replace({
 });
 ```
 
-Default emoticons mapping ([PREVIEW](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)) can be easily accessed and modified in the `fw_emoticons.js` file.
+### [DEFAULT EMOTICONS MAPPINGS](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)
 
-- **NOTE 1.** If you want to replace emoticons multiple times using default mappings, get an Emoticons instance: `var emoticons = new Emoticons();` and use it all over a scope, e.g. `emoticons.replace({selector: '.aDiv'});` ... `emoticons.replace({selector: '.bDiv'});`
+- **NOTE 1.** If you want to replace emoticons multiple times, get an Emoticons instance and use it all over the scope, e.g:
+
+```javascript
+var emoticons = new Emoticons({'happy': ':D'}); // For better performance modify default mapping once by passing config in constructor
+emoticons.replace({selector: '.aDiv'});
+emoticons.replace({selector: '.bDiv'});
+```
+
 - **NOTE 2.** Do NOT use nested selectors, e.g. `.comment, .comment p`. It may skip child blocks and cause a slight performance drop in extreme cases. Instead, in this example run the `replace` function twice, or wrap existing text from `.comment` block in any html tag.
 
 ## License
