@@ -96,10 +96,10 @@ new Emoticons().replace({
 
 ### [DEFAULT EMOTICONS MAPPINGS](https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/demo/emoticons_mapping.html)
 
-- **NOTE 1.** If you want to replace emoticons multiple times, get an Emoticons instance and use it all over the scope, e.g:
+- **NOTE 1.** If you want to replace emoticons multiple times, for better performance get an Emoticons instance and use it all over the scope, e.g:
 
 ```javascript
-var emoticons = new Emoticons({'happy': ':D'}); // For better performance modify default mapping once by passing config in constructor
+var emoticons = new Emoticons({'happy': ':D'}); // If you want to modify default mapping - for even better performance pass it once in constructor.
 emoticons.replace({selector: '.aDiv'});
 emoticons.replace({selector: '.bDiv'});
 ```
