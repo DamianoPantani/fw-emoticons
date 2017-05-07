@@ -1,7 +1,10 @@
 (function() {
 this.Emoticons = (function() {
 
-function Emoticons() {}
+function Emoticons(emoMap) {
+	this.defaultEmoRegexMap = convertToRegexMap(this.defaultEmoMap);
+	this.defaultEmoRegexMap = emoMap ? this.mergeAndGetRegexMap(emoMap) : this.defaultEmoRegexMap;
+}
 
 Emoticons.prototype.defaultEmoMap = {
 'smile': [':)',':}',':]',':-)',':-}',':-]'],
@@ -28,8 +31,6 @@ Emoticons.prototype.defaultEmoMap = {
 'ban': [':ban:']
 };
 
-Emoticons.prototype.defaultEmoRegexMap = convertToRegexMap(Emoticons.prototype.defaultEmoMap);
-
 Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
 	var newMap = Object.assign({}, this.defaultEmoRegexMap); //clone
 	for (var emoClass in userMap) {
@@ -46,8 +47,7 @@ Emoticons.prototype.replace = function(options){
 	var emoTag = options.emoTag ? options.emoTag : 'i';
 	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
 	var newContentSuffix = '"></'+emoTag+'>';
-	var regexMap = options.emoMap ? options.emoMap : {};
-	regexMap = this.mergeAndGetRegexMap(regexMap);
+	var regexMap = options.emoMap ? this.mergeAndGetRegexMap(options.emoMap) : this.defaultEmoRegexMap;
 
 	document.querySelectorAll(options.selector).forEach(function(element){
 		var content = element.innerHTML;
