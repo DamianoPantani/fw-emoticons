@@ -117,4 +117,4 @@ FW-Emoticons is a Freeware component, but it uses third-party font faces. Please
 - [Far.Chehre (Meme) font](http://fontpro.com/far-chehre-font-9520): Abolfazl Seilsepour ([seilsepour.ir](http://www.seilsepour.ir)) 100% Free
 
 ## Contact
-Any considerations? Problems? Upgrade ideas? Please leave me a message on GitHub (raise an issue, comment a line of any commit) or directly via email: `dejmiens@yahoo.com` Thank you!
+Any considerations? Problems? Upgrade ideas? Please [raise an issue](https://github.com/DamianoPantani/fw-emoticons/issues/new). Thank you!
