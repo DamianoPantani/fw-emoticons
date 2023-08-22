@@ -32,7 +32,7 @@ Emoticons.prototype.defaultEmoMap = {
 };
 
 Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
-	var newMap = Object.assign({}, this.defaultEmoRegexMap); //clone
+	var newMap = Object.assign({}, this.defaultEmoRegexMap); // clone
 	for (var emoClass in userMap) {
 		var emoArray = userMap[emoClass];
 		emoArray = typeof emoArray === 'string' ? [emoArray] : Array.isArray(emoArray) ? emoArray : [];

@@ -14,7 +14,7 @@ Do you like [Font Awesome Icons](http://fontawesome.io)? You gotta love **Font W
 <link rel="stylesheet" type="text/css" media="all" href="https://cdn.staticaly.com/gh/DamianoPantani/fw-emoticons/v0.9/dist/fw_emoticons.css">
 ```
 
-You can also [download the repo](https://github.com/DamianoPantani/fw-emoticons/archive/master.zip), and link just css.
+You can also [download the repo](https://github.com/DamianoPantani/fw-emoticons/archive/master.zip), and just link `fw_emoticons.css` in your HTML.
 
 ## Usage
 
